@@ -1,7 +1,15 @@
 package com.h5.mapper;
 
 import com.h5.entity.LM7;
+import com.h5.entity.LM8;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+
+
+@Mapper
+@Component
 public interface LM7Mapper {
     int deleteByPrimaryKey(Long id);
 
@@ -14,4 +22,6 @@ public interface LM7Mapper {
     int updateByPrimaryKeySelective(LM7 record);
 
     int updateByPrimaryKey(LM7 record);
+
+    List<LM7> queryList();
 }

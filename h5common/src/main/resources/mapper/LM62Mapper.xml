@@ -17,14 +17,19 @@
     from L_M62
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    <select id="queryList" resultType="com.h5.entity.LM62">
+      select
+      <include refid="Base_Column_List" />
+      from L_M62
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from L_M62
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.h5.entity.LM62" >
-    insert into L_M62 (id, drawid, zodic, 
+    insert into L_M62 ( drawid, zodic,
       opgame, pid)
-    values (#{id,jdbcType=BIGINT}, #{drawid,jdbcType=NVARCHAR}, #{zodic,jdbcType=NVARCHAR}, 
+    values ( #{drawid,jdbcType=NVARCHAR}, #{zodic,jdbcType=NVARCHAR},
       #{opgame,jdbcType=NVARCHAR}, #{pid,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.h5.entity.LM62" >

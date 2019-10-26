@@ -20,15 +20,20 @@
     from L_M7
     where id = #{id,jdbcType=BIGINT}
   </select>
+  <select id="queryList" resultType="com.h5.entity.LM7">
+    select
+    <include refid="Base_Column_List" />
+    from L_M7
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from L_M7
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.h5.entity.LM7" >
-    insert into L_M7 (id, drawid, zodic, 
+    insert into L_M7 ( drawid, zodic,
       opgame, zodic2, zodic3, 
       zodic4, zodic5)
-    values (#{id,jdbcType=BIGINT}, #{drawid,jdbcType=NVARCHAR}, #{zodic,jdbcType=NVARCHAR}, 
+    values (#{drawid,jdbcType=NVARCHAR}, #{zodic,jdbcType=NVARCHAR},
       #{opgame,jdbcType=NVARCHAR}, #{zodic2,jdbcType=NVARCHAR}, #{zodic3,jdbcType=NVARCHAR}, 
       #{zodic4,jdbcType=NVARCHAR}, #{zodic5,jdbcType=NVARCHAR})
   </insert>
