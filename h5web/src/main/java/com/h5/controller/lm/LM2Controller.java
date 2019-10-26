@@ -4,8 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.h5.entity.LM1;
-import com.h5.service.lm.LM1Service;
+import com.h5.entity.LM2;
+import com.h5.service.lm.LM2Service;
 import com.h5.utils.QueryObject;
 import com.h5.utils.RespFormat;
 import org.apache.commons.lang3.StringUtils;
@@ -18,12 +18,12 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@RequestMapping("/lm1")
+@RequestMapping("/lm2")
 @Controller
-public class LM1Controller {
+public class LM2Controller {
 
     @Autowired
-    private LM1Service lm1Service;
+    private LM2Service lm2Service;
 
     /**
      * 列表
@@ -32,10 +32,10 @@ public class LM1Controller {
     @RequestMapping("/list")
     public ModelAndView list(ModelAndView modelAndView, QueryObject queryObject){
         PageHelper.startPage(queryObject.getPageNum(),queryObject.getPageSize());
-        Page<LM1> lm1s=lm1Service.list();
-        PageInfo<LM1> pageInfo = new PageInfo<LM1>(lm1s);//封装page
+        Page<LM2> lm1s=lm2Service.list();
+        PageInfo<LM2> pageInfo = new PageInfo<LM2>(lm1s);//封装page
         modelAndView.addObject("pageInfo",pageInfo);
-        modelAndView.setViewName("/lm/lm1List");
+        modelAndView.setViewName("/lm/lm2List");
         return modelAndView;
     }
 
@@ -46,7 +46,7 @@ public class LM1Controller {
      */
     @RequestMapping("/add")
     public ModelAndView add(ModelAndView modelAndView){
-        modelAndView.setViewName("/lm/lm1Edit");
+        modelAndView.setViewName("/lm/lm2Edit");
         return modelAndView;
     }
 
@@ -55,26 +55,26 @@ public class LM1Controller {
      * @return
      */
     @RequestMapping("/saveOrUpdate")
-    public void saveOrUpdate(LM1 lm1, HttpServletResponse response) throws IOException {
+    public void saveOrUpdate(LM2 lm2, HttpServletResponse response) throws IOException {
         response.setContentType("text/json; charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         String information = "成功";
         Boolean bit = true;
         JSONObject jsonObject = new JSONObject();
         //校验参数信息
-        if (lm1 == null) {
+        if (lm2 == null) {
             information = "关键信息不能为空哦";
             bit = false;
-        } else if (!StringUtils.isNoneBlank(lm1.getDrawid(),lm1.getZodic(),lm1.getOpgame())) {
+        } else if (!StringUtils.isNoneBlank(lm2.getDrawid(),lm2.getZodic(),lm2.getOpgame())) {
             information = "关键信息不能为空哦";
             bit = false;
         } else {
-            if (lm1.getId()!=null){
+            if (lm2.getId()!=null){
                 //修改
-                lm1Service.update(lm1);
+                lm2Service.update(lm2);
             }else {
                 //插入
-                lm1Service.save(lm1);
+                lm2Service.save(lm2);
             }
         }
         jsonObject.put("information", information);
@@ -89,9 +89,9 @@ public class LM1Controller {
      */
     @RequestMapping("/addEdit")
     public ModelAndView addEdit(ModelAndView modelAndView,Long id){
-        LM1 lm1=lm1Service.addEdit(id);
-        modelAndView.addObject("lm1",lm1);
-        modelAndView.setViewName("/lm/lm1Edit");
+        LM2 lm2=lm2Service.addEdit(id);
+        modelAndView.addObject("lm2",lm2);
+        modelAndView.setViewName("/lm/lm2Edit");
         return modelAndView;
     }
 
@@ -105,9 +105,9 @@ public class LM1Controller {
         //获取用户信息
         String msg = "";
         try {
-            LM1 lm1 = lm1Service.addEdit(id);
+            LM2 lm1 = lm2Service.addEdit(id);
             if (null != lm1) {
-                int i = lm1Service.del(id);
+                int i = lm2Service.del(id);
                 if (i == 0) {
                     msg = "删除失败";
                     return RespFormat.markError(msg);

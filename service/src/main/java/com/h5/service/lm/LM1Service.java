@@ -28,4 +28,6 @@ public interface LM1Service {
      * @return
      */
     LM1 addEdit(Long id);
+
+    int del(Long id);
 }

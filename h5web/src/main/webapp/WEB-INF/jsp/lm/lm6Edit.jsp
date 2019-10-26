@@ -16,7 +16,6 @@
     <script src="../resource/style/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="../resource/lib/z-tree/js/jquery.ztree.core.js" type="text/javascript" charset="utf-8"></script>
     <script src="../resource/lib/z-tree/js/jquery.ztree.excheck.js" type="text/javascript" charset="utf-8"></script>
-<%--    <script src="../resource/layui/layui.js" type="text/javascript" charset="utf-8"></script>--%>
 
 </head>
 
@@ -36,7 +35,6 @@
                             <div class="layui-input-block">
                                 <input type="text" name="zodic" lay-verify="required"  autocomplete="off" placeholder="请输入内容(必填项)"
                                 value="${lm.zodic}" class="layui-input" >
-                                <%--<span style="color:red">(11个中文字)</span>--%>
                             </div>
                         </div>
                         <div class="layui-form-item">

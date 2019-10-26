@@ -49,4 +49,9 @@ public class LM1ServiceImp implements LM1Service {
     public LM1 addEdit(Long id) {
         return lm1Mapper.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int del(Long id) {
+        return lm1Mapper.deleteByPrimaryKey(id);
+    }
 }

@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>修改</title>
+    <title>编辑</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -16,7 +16,6 @@
     <script src="../resource/style/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="../resource/lib/z-tree/js/jquery.ztree.core.js" type="text/javascript" charset="utf-8"></script>
     <script src="../resource/lib/z-tree/js/jquery.ztree.excheck.js" type="text/javascript" charset="utf-8"></script>
-
 </head>
 
 <body class="gray-bg">
@@ -25,25 +24,31 @@
         <div class="col-sm-12">
             <div class="ibox float-e-margins l_ibox">
                 <fieldset class="layui-elem-field layui-field-title">
-                    <legend>编辑</legend>
+                    <legend>编辑LM2平特计划数据</legend>
                 </fieldset>
                 <form class="layui-form" action="../sysMenu/saveOrUpdate" method="post" id="editForm">
-                    <input id="id" name="id" hidden value="${lm.id}">
+                    <input id="id" name="id" hidden value="${lm2.id}">
                     <div class="l_three clearfix">
                         <div class="layui-form-item">
-                            <label class="layui-form-label">内容：</label>
+                            <label class="layui-form-label">期号：</label>
                             <div class="layui-input-block">
-                                <input type="text" name="zodic" lay-verify="required"  autocomplete="off" placeholder="请输入内容(必填项)"
-                                value="${lm.zodic}" class="layui-input" >
+                                <input type="text" name="drawid" lay-verify="required"  autocomplete="off" placeholder="请输入期号(必填项)"
+                                value="${lm2.drawid}" class="layui-input"  maxlength="10">
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label class="layui-form-label">开奖：</label>
+                            <label class="layui-form-label">三肖：</label>
                             <div class="layui-input-block">
-                                <input type="text" name="opgame" lay-verify="required" autocomplete="off" placeholder="请输入开奖信息(必填项)" value="${lm.opgame}" class="layui-input">
+                                <input type="text" name="zodic" lay-verify="required" maxlength="10" autocomplete="off" placeholder="请输入三肖(必填项)" value="${lm2.zodic}" class="layui-input">
                             </div>
                         </div>
 
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">开奖号码：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="opgame"  autocomplete="off" placeholder="请输入开奖号码" value="${lm2.opgame}" class="layui-input">
+                            </div>
+                        </div>
                     </div>
                     <div class="l_three clearfix">
                         <div class="layui-form-item">
@@ -72,21 +77,15 @@
         });
 
     form.on("submit(save)", function(data) {
-    // alert(data);
-    //弹出提交内容
-    /*layer.alert(JSON.stringify(data.field), {
-    title: '最终的提交信息'
-    });*/
-    //debugger;
     $.ajax({
     type:"POST",
-    url:"saveOrUpdate",
+    url:"../lm2/saveOrUpdate",
     data: data.field,
     dataType:"json",
     success:function(data){
-    layer.msg(data.msg, {
+    layer.msg(data.information, {
     icon: 1, time: 500, end: function () {
-    if(data.msg.indexOf('成功') != -1){
+    if(data.information.indexOf('成功') != -1){
     location.reload();
     }
     }

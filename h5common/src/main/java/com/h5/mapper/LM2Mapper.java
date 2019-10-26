@@ -1,7 +1,12 @@
 package com.h5.mapper;
 
+import com.github.pagehelper.Page;
 import com.h5.entity.LM2;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
+@Component
+@Mapper
 public interface LM2Mapper {
     int deleteByPrimaryKey(Long id);
 
@@ -14,4 +19,6 @@ public interface LM2Mapper {
     int updateByPrimaryKeySelective(LM2 record);
 
     int updateByPrimaryKey(LM2 record);
+
+    Page<LM2> list();
 }

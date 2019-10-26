@@ -6,7 +6,7 @@
 
         <head>
         <meta charset="utf-8">
-        <title>LM1平特-肖王管理</title>
+        <title>LM2平特计划管理</title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,
@@ -22,7 +22,7 @@
         <div class="col-sm-12 m_col-sm-12">
         <div class="ibox float-e-margins m_userinfo">
         <fieldset class="layui-elem-field layui-field-title">
-        <legend>LM1平特-肖王管理</legend>
+        <legend>LM2平特计划管理</legend>
         </fieldset>
         <form class="layui-form" action="../sysMenu/list" id="query" method="post">
         <div class="layui-form-item">
@@ -126,7 +126,7 @@
         "grade": $("select[name=grade]").val()
         };
 
-        httpPost("../lm1/list", params);
+        httpPost("../lm2/list", params);
         }
         }
         });
@@ -235,11 +235,11 @@
         });
 
         function add(){
-        $.post('../lm1/add', function (str) {
+        $.post('../lm2/add', function (str) {
         //console.log(str)
         layer.open({
         type: 1,
-        title: '新增LM1平特-肖王数据',
+        title: '新增LM2平特计划数据',
         shadeClose: true,
         shade: false,
         fixed: false,
@@ -282,7 +282,7 @@
         layer.close(index);
         $.ajax({
         type:"POST",
-        url:"../lm1/delete",
+        url:"../lm2/delete",
         data: {"id":id},
         dataType:"json",
         success:function(data){
@@ -302,11 +302,11 @@
 
 
         function edit(id){
-        $.post('../lm1/addEdit', {"id":id}, function (str) {
+        $.post('../lm2/addEdit', {"id":id}, function (str) {
         //console.log(str)
         layer.open({
         type: 1,
-        title: '编辑LM1平特-肖王',
+        title: '编辑LM2平特计划数据',
         shadeClose: true,
         shade: false,
         fixed: false,

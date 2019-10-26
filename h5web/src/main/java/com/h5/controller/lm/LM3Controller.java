@@ -4,8 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.h5.entity.LM1;
-import com.h5.service.lm.LM1Service;
+import com.h5.entity.LM3;
+import com.h5.service.lm.LM3Service;
 import com.h5.utils.QueryObject;
 import com.h5.utils.RespFormat;
 import org.apache.commons.lang3.StringUtils;
@@ -14,16 +14,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@RequestMapping("/lm1")
+@RequestMapping("/lm3")
 @Controller
-public class LM1Controller {
+public class LM3Controller {
 
     @Autowired
-    private LM1Service lm1Service;
+    private LM3Service lm3Service;
 
     /**
      * 列表
@@ -32,10 +31,10 @@ public class LM1Controller {
     @RequestMapping("/list")
     public ModelAndView list(ModelAndView modelAndView, QueryObject queryObject){
         PageHelper.startPage(queryObject.getPageNum(),queryObject.getPageSize());
-        Page<LM1> lm1s=lm1Service.list();
-        PageInfo<LM1> pageInfo = new PageInfo<LM1>(lm1s);//封装page
+        Page<LM3> lm3s=lm3Service.list();
+        PageInfo<LM3> pageInfo = new PageInfo<LM3>(lm3s);//封装page
         modelAndView.addObject("pageInfo",pageInfo);
-        modelAndView.setViewName("/lm/lm1List");
+        modelAndView.setViewName("/lm/lm3List");
         return modelAndView;
     }
 
@@ -46,7 +45,7 @@ public class LM1Controller {
      */
     @RequestMapping("/add")
     public ModelAndView add(ModelAndView modelAndView){
-        modelAndView.setViewName("/lm/lm1Edit");
+        modelAndView.setViewName("/lm/lm3Edit");
         return modelAndView;
     }
 
@@ -55,26 +54,26 @@ public class LM1Controller {
      * @return
      */
     @RequestMapping("/saveOrUpdate")
-    public void saveOrUpdate(LM1 lm1, HttpServletResponse response) throws IOException {
+    public void saveOrUpdate(LM3 lm3, HttpServletResponse response) throws IOException {
         response.setContentType("text/json; charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         String information = "成功";
         Boolean bit = true;
         JSONObject jsonObject = new JSONObject();
         //校验参数信息
-        if (lm1 == null) {
+        if (lm3 == null) {
             information = "关键信息不能为空哦";
             bit = false;
-        } else if (!StringUtils.isNoneBlank(lm1.getDrawid(),lm1.getZodic(),lm1.getOpgame())) {
+        } else if (!StringUtils.isNoneBlank(lm3.getDrawid(),lm3.getZodic(),lm3.getOpgame())) {
             information = "关键信息不能为空哦";
             bit = false;
         } else {
-            if (lm1.getId()!=null){
+            if (lm3.getId()!=null){
                 //修改
-                lm1Service.update(lm1);
+                lm3Service.update(lm3);
             }else {
                 //插入
-                lm1Service.save(lm1);
+                lm3Service.save(lm3);
             }
         }
         jsonObject.put("information", information);
@@ -83,15 +82,15 @@ public class LM1Controller {
     }
 
     /**
-     * 根据id查询对应Lm1数据,用于编辑页面回显
+     * 根据id查询对应Lm3数据,用于编辑页面回显
      * @param id
      * @return modelAndView
      */
     @RequestMapping("/addEdit")
     public ModelAndView addEdit(ModelAndView modelAndView,Long id){
-        LM1 lm1=lm1Service.addEdit(id);
-        modelAndView.addObject("lm1",lm1);
-        modelAndView.setViewName("/lm/lm1Edit");
+        LM3 lm3=lm3Service.addEdit(id);
+        modelAndView.addObject("lm3",lm3);
+        modelAndView.setViewName("/lm/lm3Edit");
         return modelAndView;
     }
 
@@ -105,9 +104,9 @@ public class LM1Controller {
         //获取用户信息
         String msg = "";
         try {
-            LM1 lm1 = lm1Service.addEdit(id);
-            if (null != lm1) {
-                int i = lm1Service.del(id);
+            LM3 lm3 = lm3Service.addEdit(id);
+            if (null != lm3) {
+                int i = lm3Service.del(id);
                 if (i == 0) {
                     msg = "删除失败";
                     return RespFormat.markError(msg);
