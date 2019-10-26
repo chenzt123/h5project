@@ -44,10 +44,9 @@
         <colgroup>
         <col width="50px">
         <col width="10%">
-        <col width="30%">
-        <col width="20%">
+         <col width="20%">
         <col>
-        <col width="165px">
+        <col width="10%">
         </colgroup>
         <thead>
         <tr>
@@ -75,7 +74,7 @@
         </c:if>
         <c:if test="${empty pageInfo.list}">
             <tr>
-            <td colspan="6"
+            <td colspan="5"
             style="text-align:center;font:700 14px/25px 'Microsoft Yahei';color:red;">
             系统没有查找到合适的数据！
             </td>
