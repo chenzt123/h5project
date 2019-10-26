@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.h5.mapper.LM5Mapper" >
+  <resultMap id="BaseResultMap" type="com.h5.entity.LM5" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="zodic" property="zodic" jdbcType="NVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, zodic
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from L_M5
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from L_M5
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.h5.entity.LM5" >
+    insert into L_M5 (id, zodic)
+    values (#{id,jdbcType=BIGINT}, #{zodic,jdbcType=NVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.h5.entity.LM5" >
+    insert into L_M5
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="zodic != null" >
+        zodic,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="zodic != null" >
+        #{zodic,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.h5.entity.LM5" >
+    update L_M5
+    <set >
+      <if test="zodic != null" >
+        zodic = #{zodic,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.h5.entity.LM5" >
+    update L_M5
+    set zodic = #{zodic,jdbcType=NVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

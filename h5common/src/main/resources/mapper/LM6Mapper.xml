@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.h5.mapper.LM6Mapper" >
+  <resultMap id="BaseResultMap" type="com.h5.entity.LM6" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="zodic" property="zodic" jdbcType="NVARCHAR" />
+    <result column="opgame" property="opgame" jdbcType="NVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, zodic, opgame
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from L_M6
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from L_M6
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.h5.entity.LM6" >
+    insert into L_M6 (id, zodic, opgame
+      )
+    values (#{id,jdbcType=BIGINT}, #{zodic,jdbcType=NVARCHAR}, #{opgame,jdbcType=NVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.h5.entity.LM6" >
+    insert into L_M6
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="zodic != null" >
+        zodic,
+      </if>
+      <if test="opgame != null" >
+        opgame,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="zodic != null" >
+        #{zodic,jdbcType=NVARCHAR},
+      </if>
+      <if test="opgame != null" >
+        #{opgame,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.h5.entity.LM6" >
+    update L_M6
+    <set >
+      <if test="zodic != null" >
+        zodic = #{zodic,jdbcType=NVARCHAR},
+      </if>
+      <if test="opgame != null" >
+        opgame = #{opgame,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.h5.entity.LM6" >
+    update L_M6
+    set zodic = #{zodic,jdbcType=NVARCHAR},
+      opgame = #{opgame,jdbcType=NVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

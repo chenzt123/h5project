@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="h5web" />
-        <module name="h5app" />
-        <module name="service" />
         <module name="h5common" />
+        <module name="h5app" />
+        <module name="h5web" />
+        <module name="service" />
       </profile>
     </annotationProcessing>
   </component>
