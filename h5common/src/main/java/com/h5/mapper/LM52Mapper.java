@@ -1,7 +1,12 @@
 package com.h5.mapper;
 
 import com.h5.entity.LM52;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+@Mapper
+@Component
 public interface LM52Mapper {
     int deleteByPrimaryKey(Long id);
 
@@ -14,4 +19,6 @@ public interface LM52Mapper {
     int updateByPrimaryKeySelective(LM52 record);
 
     int updateByPrimaryKey(LM52 record);
+
+    List<LM52> queryList();
 }
