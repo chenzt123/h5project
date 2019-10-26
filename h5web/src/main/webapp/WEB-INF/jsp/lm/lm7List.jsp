@@ -47,10 +47,15 @@
         <table class="layui-table m_table" lay-filter="demo">
         <colgroup>
         <col width="50px">
-        <col width="20%">
-        <col width="20%">
-        <col>
-        <col width="165px">
+        <col width="12%">
+        <col width="12%">
+            <col width="12%">
+            <col width="12%">
+            <col width="12%">
+            <col width="12%">
+            <col width="12%">
+            <col width="12%">
+
         </colgroup>
         <thead>
         <tr>

@@ -6,7 +6,7 @@
 
         <head>
         <meta charset="utf-8">
-        <title>菜单管理</title>
+        <title>原创资料二级</title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,
@@ -22,7 +22,7 @@
         <div class="col-sm-12 m_col-sm-12">
         <div class="ibox float-e-margins m_userinfo">
         <fieldset class="layui-elem-field layui-field-title">
-        <legend>菜单信息</legend>
+        <legend>原创资料二级</legend>
         </fieldset>
                 <div class="search-three m_three clearfix">
                         <div class="layui-form-item">
@@ -49,7 +49,8 @@
         <col width="50px">
             <col width="20%">
             <col width="20%">
-        <col>
+            <col width="20%">
+            <col width="20%">
         <col width="165px">
         </colgroup>
         <thead>
