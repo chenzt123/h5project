@@ -1,7 +1,11 @@
 package com.h5.mapper;
 
 import com.h5.entity.LM1;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
+@Component
+@Mapper
 public interface LM1Mapper {
     int deleteByPrimaryKey(Long id);
 
