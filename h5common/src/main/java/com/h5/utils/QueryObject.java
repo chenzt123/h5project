@@ -5,7 +5,7 @@ public class QueryObject {
 
     private Integer pageNum= 1;//当前页
 
-    private Integer pageSize=10;//没有最大显示条数.
+    private Integer pageSize=3;//没有最大显示条数.
 
     //分页的方法
     public Integer getStart(){

@@ -6,7 +6,7 @@
 
         <head>
         <meta charset="utf-8">
-        <title>菜单管理</title>
+        <title>LM1管理</title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,
@@ -22,41 +22,13 @@
         <div class="col-sm-12 m_col-sm-12">
         <div class="ibox float-e-margins m_userinfo">
         <fieldset class="layui-elem-field layui-field-title">
-        <legend>菜单信息</legend>
+        <legend>LM1管理</legend>
         </fieldset>
         <form class="layui-form" action="../sysMenu/list" id="query" method="post">
-        <div class="search-three m_three clearfix">
-        <div class="layui-form-item">
-        <label class="layui-form-label">菜单名称：</label>
-        <div class="layui-input-block">
-        <input type="text" id="name" name="name" value="${name}" name="name" lay-verify="required|title"
-        autocomplete="off" placeholder="请输入菜单名称" class="layui-input">
-        </div>
-        </div>
-
-        <div class="layui-form-item">
-        <label class="layui-form-label">菜单类型：</label>
-        <div class="layui-input-block">
-        <select name="grade" id="grade" lay-filter="aihao">
-        <option value="" <c:if test="${grade == ''|| status==null}">selected="selected"</c:if>>请选择</option>
-        <option value="1" <c:if test="${grade == 1}">selected="selected"</c:if>>一级菜单</option>
-        <option value="2" <c:if test="${grade == 2}">selected="selected"</c:if>>二级菜单</option>
-        </select>
-        </div>
-        </div>
-
         <div class="layui-form-item">
         <label class="layui-form-label"></label>
-        <button type="button" class="layui-btn" onclick="queryInfo()">查询</button>
-        <button type="button" class="layui-btn layui-btn-normal" onclick="add('${menuId}')">新增</button>
-        <button type="button" class="layui-btn layui-btn-warm" id="modify">重置</button>
-        <%--                        <button type="button" class="layui-btn layui-btn-danger" id="del">删除</button>--%>
-        <%--                        <button type="button" class="layui-btn layui-btn-disabled">禁用按钮</button>--%>
+        <button type="button" class="layui-btn layui-btn-normal" style="float:right;margin-right: 20px;" onclick="add()">新增</button>
         </div>
-
-
-        </div>
-
         </form>
         </div>
         </div>
@@ -80,10 +52,9 @@
         <thead>
         <tr>
         <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" class="l_table_checkbox"></th>
-        <th>菜单名称</th>
-        <th>创建时间</th>
-        <th>父菜单名称</th>
-        <th>URL</th>
+        <th>期号</th>
+        <th>三肖</th>
+        <th>开奖</th>
         <th>操作</th>
         </tr>
         </thead>
@@ -92,14 +63,12 @@
             <c:forEach items="${pageInfo.list}" var="memu" begin="0" step="1" varStatus="star">
                 <tr>
                 <td><input type="checkbox" name="" lay-skin="primary" class="l_table_checkbox"></td>
-                <td>${memu.name}</td>
-                <td>${memu.createTime}</td>
-                <td>${memu.parentId}</td>
-                <td>${memu.url}</td>
+                <td>${memu.drawid}</td>
+                <td>${memu.zodic}</td>
+                <td>${memu.opgame}</td>
                 <td>
-                <%--                                    <a href="javascript:;" class="layui-btn layui-btn-primary layui-btn-xs examine">角色授权</a>--%>
-                <a class="layui-btn layui-btn-xs redact" onclick="edit('${memu.menuId}')">编辑</a>
-                <a class="layui-btn layui-btn-danger layui-btn-xs delete" onclick="del('${memu.menuId}')">删除</a>
+                <a class="layui-btn layui-btn-xs redact" onclick="edit('${memu.id}')">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs delete" onclick="del('${memu.id}')">删除</a>
                 </td>
                 </tr>
             </c:forEach>
@@ -157,10 +126,8 @@
         "grade": $("select[name=grade]").val()
         };
 
-        httpPost("../sysMenu/list", params);
-        // window.location.href="getMemberList?pageNo="+obj.curr;
+        httpPost("../lm1/list", params);
         }
-        // console.log(obj.curr)
         }
         });
         //自定义验证规则
@@ -210,6 +177,8 @@
         })
         //indexs调整或关闭iframe窗口的时候需要
         var indexs;
+
+
         //新增
         $("#add-btn").click(function() {
         //iframe窗
@@ -263,35 +232,14 @@
         }
         });
         })
-        // // 编辑
-        // $('.m_table .redact').click(function() {
-        // layer.open({
-        // type: 2,
-        // title: '商家信息新增',
-        // shadeClose: true,
-        // shade: false,
-        // fixed: false,
-        // resize: false,
-        // maxmin: false, //开启最大化最小化按钮
-        // area: ['100%', '100%'],
-        // content: '../component/form/edit.html',
-        // success: function(layero, index) {
-        // indexs = index;
-        // layer.full(index);
-        // $(".layui-layer-iframe").css("overflow", "hidden");
-        // }
-        // });
-        // })
-        // 删除
-
         });
 
-        function add(menuId){
-        $.post('../sysMenu/addOrUpdate', {"menuId":menuId}, function (str) {
+        function add(){
+        $.post('../lm1/add', function (str) {
         //console.log(str)
         layer.open({
         type: 1,
-        title: '编辑菜单',
+        title: '新增LM1数据',
         shadeClose: true,
         shade: false,
         fixed: false,
@@ -300,7 +248,6 @@
         area: ['100%', '100%'],
         content: str,
         success: function (layero, index) {
-
         indexs = index;
         layer.full(index);
         $(".layui-layer-iframe").css("overflow", "auto");
@@ -313,7 +260,6 @@
         layer = layui.layer;
         form.render();
         })
-
         },
         end: function () {
         location.reload();
@@ -331,13 +277,12 @@
 
 
         //删除
-        function del(menuId){
-
+        function del(id){
         layer.confirm('确定删除该行吗？', function(index) {
         layer.close(index);
         $.ajax({
         type:"POST",
-        url:"../sysMenu/deleteMenu",
+        url:"../lm1/deleteMenu",
         data: {"menuId":menuId},
         dataType:"json",
         success:function(data){
@@ -356,12 +301,12 @@
         }
 
 
-        function edit(menuId){
-        $.post('../sysMenu/addOrUpdate', {"menuId":menuId}, function (str) {
+        function edit(id){
+        $.post('../lm1/addEdit', {"id":id}, function (str) {
         //console.log(str)
         layer.open({
         type: 1,
-        title: '编辑菜单',
+        title: '编辑LM1平特-肖王',
         shadeClose: true,
         shade: false,
         fixed: false,

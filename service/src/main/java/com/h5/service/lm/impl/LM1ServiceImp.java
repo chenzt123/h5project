@@ -21,4 +21,32 @@ public class LM1ServiceImp implements LM1Service {
     public Page<LM1> list() {
         return lm1Mapper.list();
     }
+
+    /**
+     * 修改
+     * @param lm1
+     */
+    @Override
+    public void update(LM1 lm1) {
+        lm1Mapper.updateByPrimaryKeySelective(lm1);
+    }
+
+    /**
+     * 插入
+     * @param lm1
+     */
+    @Override
+    public void save(LM1 lm1) {
+        lm1Mapper.insert(lm1);
+    }
+
+    /**
+     * 根据id查询对应Lm1数据
+     * @param id
+     * @return
+     */
+    @Override
+    public LM1 addEdit(Long id) {
+        return lm1Mapper.selectByPrimaryKey(id);
+    }
 }
