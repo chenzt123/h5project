@@ -205,13 +205,41 @@
         <div class="layui-side layui-side-menu">
             <div class="layui-side-scroll">
                 <div class="layui-logo" lay-href="home/console.html">
-                    <span>资讯后台管理系统</span>
+                    <span>六合咨询管理系统</span>
 
                 </div>
 
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
 
-
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-icon layui-icon-component"></i>
+                            <cite>demo</cite>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;">公共</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a lay-href="${ctx}/web/module/manager/gamepublic.do?_action=list">公共</a></dd>
+                                </dl>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;">曾道人</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a lay-href="${ctx}/web/module/zdr/zm1.do?_action=edit">主打</a></dd>
+                                    <dd><a lay-href="${ctx}/web/module/zdr/zm4.do">平特一肖</a></dd>
+                                    <dd><a lay-href="${ctx}/web/module/zdr/gaoshou.do?_action=list">高手资料区</a></dd>
+                                </dl>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;">管家婆</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a lay-href="${ctx}/web/module/zdr/zm1.do?_action=edit">主打</a></dd>
+                                    <dd><a lay-href="${ctx}/web/module/zdr/zm4.do">平特一肖</a></dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </li>
 
                 </ul>
             </div>
