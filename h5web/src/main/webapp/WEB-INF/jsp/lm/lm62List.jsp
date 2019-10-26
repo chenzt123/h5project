@@ -49,7 +49,8 @@
         <col width="50px">
             <col width="20%">
             <col width="20%">
-        <col>
+            <col width="20%">
+            <col width="20%">
         <col width="165px">
         </colgroup>
         <thead>

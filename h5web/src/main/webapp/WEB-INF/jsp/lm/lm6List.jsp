@@ -47,8 +47,9 @@
         <table class="layui-table m_table" lay-filter="demo">
         <colgroup>
         <col width="50px">
-        <col>
-        <col width="165px">
+            <col width="20%">
+        <col width="40%">
+        <col width="10%">
         </colgroup>
         <thead>
         <tr>

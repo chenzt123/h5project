@@ -241,16 +241,16 @@
                             <dd>
                                 <a href="javascript:;">雷</a>
                                 <dl class="layui-nav-child">
-                                    <dd><a lay-href="/lm1/list">lm1</a></dd>
-                                    <dd><a lay-href="/lm2/list">lm2</a></dd>
-                                    <dd><a lay-href="/lm3/list">lm3</a></dd>
-                                    <dd><a lay-href="/lm4/list">lm4</a></dd>
-                                    <dd><a lay-href="/lm5/list">lm5</a></dd>
-                                    <dd><a lay-href="/lm52/list">lm52</a></dd>
-                                    <dd><a lay-href="/lm6/list">lm6</a></dd>
-                                    <dd><a lay-href="/lm62/list">lm62</a></dd>
-                                    <dd><a lay-href="/lm7/list">lm7</a></dd>
-                                    <dd><a lay-href="/lm8/list">lm8</a></dd>
+                                    <dd><a lay-href="/lm1/list">平特-肖王</a></dd>
+                                    <dd><a lay-href="/lm2/list">平特计划</a></dd>
+                                    <dd><a lay-href="/lm3/list">六肖计划</a></dd>
+                                    <dd><a lay-href="/lm4/list">一肖一码</a></dd>
+                                    <dd><a lay-href="/lm5/list">高手资料专区</a></dd>
+                                    <dd><a lay-href="/lm52/list">高手资料专区二级</a></dd>
+                                    <dd><a lay-href="/lm6/list">原创资料</a></dd>
+                                    <dd><a lay-href="/lm62/list">原创资料二级</a></dd>
+                                    <dd><a lay-href="/lm7/list">站长解狗诗</a></dd>
+                                    <dd><a lay-href="/lm8/list">生活幽默解码</a></dd>
                                 </dl>
                             </dd>
                         </dl>
