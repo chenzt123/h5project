@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.h5.mapper.LM2Mapper" >
+  <resultMap id="BaseResultMap" type="com.h5.entity.LM2" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="drawid" property="drawid" jdbcType="NVARCHAR" />
+    <result column="zodic" property="zodic" jdbcType="NVARCHAR" />
+    <result column="opgame" property="opgame" jdbcType="NVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, drawid, zodic, opgame
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from L_M2
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from L_M2
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.h5.entity.LM2" >
+    insert into L_M2 (id, drawid, zodic, 
+      opgame)
+    values (#{id,jdbcType=BIGINT}, #{drawid,jdbcType=NVARCHAR}, #{zodic,jdbcType=NVARCHAR}, 
+      #{opgame,jdbcType=NVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.h5.entity.LM2" >
+    insert into L_M2
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="drawid != null" >
+        drawid,
+      </if>
+      <if test="zodic != null" >
+        zodic,
+      </if>
+      <if test="opgame != null" >
+        opgame,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="drawid != null" >
+        #{drawid,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic != null" >
+        #{zodic,jdbcType=NVARCHAR},
+      </if>
+      <if test="opgame != null" >
+        #{opgame,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.h5.entity.LM2" >
+    update L_M2
+    <set >
+      <if test="drawid != null" >
+        drawid = #{drawid,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic != null" >
+        zodic = #{zodic,jdbcType=NVARCHAR},
+      </if>
+      <if test="opgame != null" >
+        opgame = #{opgame,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.h5.entity.LM2" >
+    update L_M2
+    set drawid = #{drawid,jdbcType=NVARCHAR},
+      zodic = #{zodic,jdbcType=NVARCHAR},
+      opgame = #{opgame,jdbcType=NVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

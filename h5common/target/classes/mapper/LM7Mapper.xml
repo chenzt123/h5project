@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.h5.mapper.LM7Mapper" >
+  <resultMap id="BaseResultMap" type="com.h5.entity.LM7" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="drawid" property="drawid" jdbcType="NVARCHAR" />
+    <result column="zodic" property="zodic" jdbcType="NVARCHAR" />
+    <result column="opgame" property="opgame" jdbcType="NVARCHAR" />
+    <result column="zodic2" property="zodic2" jdbcType="NVARCHAR" />
+    <result column="zodic3" property="zodic3" jdbcType="NVARCHAR" />
+    <result column="zodic4" property="zodic4" jdbcType="NVARCHAR" />
+    <result column="zodic5" property="zodic5" jdbcType="NVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, drawid, zodic, opgame, zodic2, zodic3, zodic4, zodic5
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from L_M7
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from L_M7
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.h5.entity.LM7" >
+    insert into L_M7 (id, drawid, zodic, 
+      opgame, zodic2, zodic3, 
+      zodic4, zodic5)
+    values (#{id,jdbcType=BIGINT}, #{drawid,jdbcType=NVARCHAR}, #{zodic,jdbcType=NVARCHAR}, 
+      #{opgame,jdbcType=NVARCHAR}, #{zodic2,jdbcType=NVARCHAR}, #{zodic3,jdbcType=NVARCHAR}, 
+      #{zodic4,jdbcType=NVARCHAR}, #{zodic5,jdbcType=NVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.h5.entity.LM7" >
+    insert into L_M7
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="drawid != null" >
+        drawid,
+      </if>
+      <if test="zodic != null" >
+        zodic,
+      </if>
+      <if test="opgame != null" >
+        opgame,
+      </if>
+      <if test="zodic2 != null" >
+        zodic2,
+      </if>
+      <if test="zodic3 != null" >
+        zodic3,
+      </if>
+      <if test="zodic4 != null" >
+        zodic4,
+      </if>
+      <if test="zodic5 != null" >
+        zodic5,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="drawid != null" >
+        #{drawid,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic != null" >
+        #{zodic,jdbcType=NVARCHAR},
+      </if>
+      <if test="opgame != null" >
+        #{opgame,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic2 != null" >
+        #{zodic2,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic3 != null" >
+        #{zodic3,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic4 != null" >
+        #{zodic4,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic5 != null" >
+        #{zodic5,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.h5.entity.LM7" >
+    update L_M7
+    <set >
+      <if test="drawid != null" >
+        drawid = #{drawid,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic != null" >
+        zodic = #{zodic,jdbcType=NVARCHAR},
+      </if>
+      <if test="opgame != null" >
+        opgame = #{opgame,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic2 != null" >
+        zodic2 = #{zodic2,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic3 != null" >
+        zodic3 = #{zodic3,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic4 != null" >
+        zodic4 = #{zodic4,jdbcType=NVARCHAR},
+      </if>
+      <if test="zodic5 != null" >
+        zodic5 = #{zodic5,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.h5.entity.LM7" >
+    update L_M7
+    set drawid = #{drawid,jdbcType=NVARCHAR},
+      zodic = #{zodic,jdbcType=NVARCHAR},
+      opgame = #{opgame,jdbcType=NVARCHAR},
+      zodic2 = #{zodic2,jdbcType=NVARCHAR},
+      zodic3 = #{zodic3,jdbcType=NVARCHAR},
+      zodic4 = #{zodic4,jdbcType=NVARCHAR},
+      zodic5 = #{zodic5,jdbcType=NVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
