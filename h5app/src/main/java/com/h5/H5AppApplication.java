@@ -19,7 +19,7 @@ public class H5AppApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(H5AppApplication.class);
+        return    application.sources(H5AppApplication.class);
     }
     @Bean
     public InternalResourceViewResolver setupViewResolver(){
