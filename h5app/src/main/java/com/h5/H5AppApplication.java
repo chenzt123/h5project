@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @SpringBootApplication
 @EnableScheduling
-public class H5AppApplication extends SpringBootServletInitializer {
+public class    H5AppApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(H5AppApplication.class, args);
