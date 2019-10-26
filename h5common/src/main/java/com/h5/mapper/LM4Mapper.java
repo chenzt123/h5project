@@ -1,7 +1,12 @@
 package com.h5.mapper;
 
 import com.h5.entity.LM4;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+@Mapper
+@Component
 public interface LM4Mapper {
     int deleteByPrimaryKey(Long id);
 
@@ -14,4 +19,6 @@ public interface LM4Mapper {
     int updateByPrimaryKeySelective(LM4 record);
 
     int updateByPrimaryKey(LM4 record);
+
+    List<LM4> queryList();
 }

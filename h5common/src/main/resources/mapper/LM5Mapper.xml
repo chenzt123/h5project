@@ -19,8 +19,8 @@
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.h5.entity.LM5" >
-    insert into L_M5 (id, zodic)
-    values (#{id,jdbcType=BIGINT}, #{zodic,jdbcType=NVARCHAR})
+    insert into L_M5 (zodic)
+    values ( #{zodic,jdbcType=NVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.h5.entity.LM5" >
     insert into L_M5
@@ -55,4 +55,9 @@
     set zodic = #{zodic,jdbcType=NVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  <select id="queryList" resultType="com.h5.entity.LM5">
+    select
+    <include refid="Base_Column_List" />
+    from L_M5
+  </select>
 </mapper>
