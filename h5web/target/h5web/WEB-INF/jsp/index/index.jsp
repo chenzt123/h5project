@@ -239,10 +239,18 @@
                                 </dl>
                             </dd>
                             <dd>
-                                <a href="javascript:;">lm</a>
+                                <a href="javascript:;">雷</a>
                                 <dl class="layui-nav-child">
                                     <dd><a lay-href="/lm1/list">lm1</a></dd>
-                                    <dd><a lay-href="${ctx}/web/module/zdr/zm4.do">平特一肖</a></dd>
+                                    <dd><a lay-href="/lm2/list">lm2</a></dd>
+                                    <dd><a lay-href="/lm3/list">lm3</a></dd>
+                                    <dd><a lay-href="/lm4/list">lm4</a></dd>
+                                    <dd><a lay-href="/lm5/list">lm5</a></dd>
+                                    <dd><a lay-href="/lm52/list">lm52</a></dd>
+                                    <dd><a lay-href="/lm6/list">lm6</a></dd>
+                                    <dd><a lay-href="/lm62/list">lm62</a></dd>
+                                    <dd><a lay-href="/lm7/list">lm7</a></dd>
+                                    <dd><a lay-href="/lm8/list">lm8</a></dd>
                                 </dl>
                             </dd>
                         </dl>

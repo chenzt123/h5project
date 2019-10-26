@@ -6,7 +6,7 @@
 
         <head>
         <meta charset="utf-8">
-        <title>生活幽默解码</title>
+        <title>LM2平特计划管理</title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,
@@ -22,18 +22,14 @@
         <div class="col-sm-12 m_col-sm-12">
         <div class="ibox float-e-margins m_userinfo">
         <fieldset class="layui-elem-field layui-field-title">
-        <legend>生活幽默解码</legend>
+        <legend>LM2平特计划管理</legend>
         </fieldset>
-                <div class="search-three m_three clearfix">
-                        <div class="layui-form-item">
-                                <label class="layui-form-label"></label>
-<%--                                <button type="button" class="layui-btn" onclick="queryInfo()">查询</button>--%>
-                                <button type="button" class="layui-btn layui-btn-normal" onclick="add('${lm.id}')">新增</button>
-<%--                                <button type="button" class="layui-btn layui-btn-warm" id="modify">重置</button>--%>
-                                <%--                        <button type="button" class="layui-btn layui-btn-danger" id="del">删除</button>--%>
-                                <%--                        <button type="button" class="layui-btn layui-btn-disabled">禁用按钮</button>--%>
-                        </div>
-                </div>
+        <form class="layui-form" action="../sysMenu/list" id="query" method="post">
+        <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <button type="button" class="layui-btn layui-btn-normal" style="float:right;margin-right: 20px;" onclick="add()">新增</button>
+        </div>
+        </form>
         </div>
         </div>
         </div>
@@ -47,7 +43,8 @@
         <table class="layui-table m_table" lay-filter="demo">
         <colgroup>
         <col width="50px">
-        <col width="20%">
+        <col width="10%">
+        <col width="30%">
         <col width="20%">
         <col>
         <col width="165px">
@@ -55,31 +52,30 @@
         <thead>
         <tr>
         <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" class="l_table_checkbox"></th>
-         <th>关键字</th>
-         <th>解肖</th>
-         <th>解码</th>
+        <th>期号</th>
+        <th>三肖</th>
+        <th>开奖</th>
         <th>操作</th>
         </tr>
         </thead>
         <tbody>
         <c:if test="${!empty pageInfo.list}">
-            <c:forEach items="${pageInfo.list}" var="lm" begin="0" step="1" varStatus="star">
+            <c:forEach items="${pageInfo.list}" var="memu" begin="0" step="1" varStatus="star">
                 <tr>
                 <td><input type="checkbox" name="" lay-skin="primary" class="l_table_checkbox"></td>
-                <td>${lm.drawid}</td>
-                <td>${lm.zodic}</td>
-                <td>${lm.opgame}</td>
+                <td>${memu.drawid}</td>
+                <td>${memu.zodic}</td>
+                <td>${memu.opgame}</td>
                 <td>
-                <%--                                    <a href="javascript:;" class="layui-btn layui-btn-primary layui-btn-xs examine">角色授权</a>--%>
-                <a class="layui-btn layui-btn-xs redact" onclick="add('${lm.id}')">编辑</a>
-                <a class="layui-btn layui-btn-danger layui-btn-xs delete" onclick="del('${lm.id}')">删除</a>
+                <a class="layui-btn layui-btn-xs redact" onclick="edit('${memu.id}')">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs delete" onclick="del('${memu.id}')">删除</a>
                 </td>
                 </tr>
             </c:forEach>
         </c:if>
         <c:if test="${empty pageInfo.list}">
             <tr>
-            <td colspan="5"
+            <td colspan="6"
             style="text-align:center;font:700 14px/25px 'Microsoft Yahei';color:red;">
             系统没有查找到合适的数据！
             </td>
@@ -125,16 +121,34 @@
         jump: function (obj, first) {
         if (!first) {
         var params = {
-        "pageNum": obj.curr
+        "pageNum": obj.curr,
+        "name": $("input[name=name]").val(),
+        "grade": $("select[name=grade]").val()
         };
 
-        httpPost("../lm8/list", params);
-        // window.location.href="getMemberList?pageNo="+obj.curr;
+        httpPost("../lm2/list", params);
         }
-        // console.log(obj.curr)
         }
         });
-
+        //自定义验证规则
+        form.verify({
+        title: function(value) {
+        if(value.length < 5) {
+        return '标题至少得5个字符啊';
+        }
+        },
+        pass: [/(.+){6,12}$/, '密码必须6到12位'],
+        content: function(value) {
+        layedit.sync(editIndex);
+        }
+        });
+        form.on('checkbox(allChoose)', function(data) {
+        var child = $(data.elem).parents('.layui-form').find('tbody input[type="checkbox"]');
+        child.each(function(index, item) {
+        item.checked = data.elem.checked;
+        });
+        form.render('checkbox');
+        });
 
         var $ = layui.$,
         active = {
@@ -163,12 +177,33 @@
         })
         //indexs调整或关闭iframe窗口的时候需要
         var indexs;
+
+
+        //新增
+        $("#add-btn").click(function() {
+        //iframe窗
+        layer.open({
+        type: 2,
+        title: '商家信息新增',
+        shadeClose: true,
+        shade: false,
+        fixed: false,
+        resize: false,
+        maxmin: false, //开启最大化最小化按钮
+        area: ['100%', '100%'],
+        content: '../component/form/group.html',
+        success: function(layero, index) {
+        indexs = index;
+        layer.full(index);
+        $(".layui-layer-iframe").css("overflow", "hidden");
+        }
+        });
+        });
         //重置
         $("#modify").click(function() {
         //iframe窗
         window.location.href = "list"
         });
-
         $(window).resize(function() {
         if($(".layui-layer-iframe").hasClass("layui-layer-iframe")) {
         layer.full(indexs);
@@ -178,16 +213,33 @@
         </script>
         <script>
         $(document).ready(function() {
-
-
+        // 查看
+        $('.m_table .examine').click(function() {
+        layer.open({
+        type: 2,
+        title: '商家信息详情',
+        shadeClose: true,
+        shade: false,
+        fixed: false,
+        resize: false,
+        maxmin: false, //开启最大化最小化按钮
+        area: ['100%', '100%'],
+        content: '../component/form/detail.html',
+        success: function(layero, index) {
+        indexs = index;
+        layer.full(index);
+        $(".layui-layer-iframe").css("overflow", "hidden");
+        }
+        });
+        })
         });
 
-        function add(id){
-        $.post('/lm8/addOrUpdate', {"id":id}, function (str) {
+        function add(){
+        $.post('../lm2/add', function (str) {
         //console.log(str)
         layer.open({
         type: 1,
-        title: '编辑菜单',
+        title: '新增LM2平特计划数据',
         shadeClose: true,
         shade: false,
         fixed: false,
@@ -196,7 +248,6 @@
         area: ['100%', '100%'],
         content: str,
         success: function (layero, index) {
-
         indexs = index;
         layer.full(index);
         $(".layui-layer-iframe").css("overflow", "auto");
@@ -209,7 +260,6 @@
         layer = layui.layer;
         form.render();
         })
-
         },
         end: function () {
         location.reload();
@@ -228,12 +278,11 @@
 
         //删除
         function del(id){
-
         layer.confirm('确定删除该行吗？', function(index) {
         layer.close(index);
         $.ajax({
         type:"POST",
-        url:"delete",
+        url:"../lm2/delete",
         data: {"id":id},
         dataType:"json",
         success:function(data){
@@ -252,12 +301,12 @@
         }
 
 
-        function edit(menuId){
-        $.post('../sysMenu/addOrUpdate', {"menuId":menuId}, function (str) {
+        function edit(id){
+        $.post('../lm2/addEdit', {"id":id}, function (str) {
         //console.log(str)
         layer.open({
         type: 1,
-        title: '编辑菜单',
+        title: '编辑LM2平特计划数据',
         shadeClose: true,
         shade: false,
         fixed: false,
