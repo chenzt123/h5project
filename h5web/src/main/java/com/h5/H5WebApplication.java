@@ -11,15 +11,15 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @SpringBootApplication
 @EnableScheduling
-public class SystemApplication extends SpringBootServletInitializer {
+public class H5WebApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-        SpringApplication.run(SystemApplication.class, args);
+        SpringApplication.run(H5WebApplication.class, args);
     }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(SystemApplication.class);
+        return application.sources(H5WebApplication.class);
     }
     @Bean
     public InternalResourceViewResolver setupViewResolver(){
