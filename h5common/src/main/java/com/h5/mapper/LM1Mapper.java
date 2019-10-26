@@ -1,5 +1,6 @@
 package com.h5.mapper;
 
+import com.github.pagehelper.Page;
 import com.h5.entity.LM1;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
@@ -18,4 +19,10 @@ public interface LM1Mapper {
     int updateByPrimaryKeySelective(LM1 record);
 
     int updateByPrimaryKey(LM1 record);
+
+    /**
+     * 列表
+     * @return
+     */
+    Page<LM1> list();
 }
