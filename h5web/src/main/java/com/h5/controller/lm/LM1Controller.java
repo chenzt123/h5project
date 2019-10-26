@@ -22,12 +22,23 @@ public class LM1Controller {
      * 列表
      * @return
      */
+    @RequestMapping("/list")
     public ModelAndView list(ModelAndView modelAndView, QueryObject queryObject){
         PageHelper.startPage(queryObject.getPageNum(),queryObject.getPageSize());
         Page<LM1> lm1s=lm1Service.list();
         PageInfo<LM1> pageInfo = new PageInfo<LM1>(lm1s);//封装page
         modelAndView.addObject("pageInfo",pageInfo);
-        modelAndView.setViewName("lm1List");
+        modelAndView.setViewName("/lm/lm1List");
+        return modelAndView;
+    }
+
+    /**
+     *
+     * @param modelAndView
+     * @return
+     */
+    public ModelAndView add(ModelAndView modelAndView){
+        modelAndView.setViewName("");
         return modelAndView;
     }
 }
