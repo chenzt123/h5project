@@ -15,14 +15,19 @@
     from L_M6
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    <select id="queryList" resultType="com.h5.entity.LM6">
+      select
+      <include refid="Base_Column_List" />
+      from L_M6
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from L_M6
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.h5.entity.LM6" >
-    insert into L_M6 (id, zodic, opgame
+    insert into L_M6 (zodic, opgame
       )
-    values (#{id,jdbcType=BIGINT}, #{zodic,jdbcType=NVARCHAR}, #{opgame,jdbcType=NVARCHAR}
+    values ( #{zodic,jdbcType=NVARCHAR}, #{opgame,jdbcType=NVARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.h5.entity.LM6" >
