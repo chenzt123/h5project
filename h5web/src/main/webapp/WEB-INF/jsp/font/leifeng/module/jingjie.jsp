@@ -1,60 +1,63 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="white-box">
     <div class="yx-web">
         <ul class="clearfix">
             <a href="javascript:void(0)"><img src="assets/images/88zlzl.png" width="100%"></a>
             <li><a  href="jingjie/demo1.html">
-                    <p><img src="assets/images/11.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/11.png"></p>
                     <p>八八密诗</p>
                 </a></li>
             <li><a  href="jingjie/demo2.html">
-                    <p><img src="assets/images/10.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/10.png"></p>
                     <p>四不像图</p>
                 </a></li>
             <li><a  href="jingjie/demo3.html">
-                    <p><img src="assets/images/9.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/9.png"></p>
                     <p>精解挂牌</p>
                 </a></li>
             <li><a  href="jingjie/demo4.html">
-                    <p><img src="assets/images/8.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/8.png"></p>
                     <p>一句真言</p>
                 </a></li>
             <li><a  href="jingjie/demo5.html">
-                    <p><img src="assets/images/7.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/7.png"></p>
                     <p>幽默解析</p>
                 </a></li>
             <li><a  href="jingjie/demo6.html">
-                    <p><img src="assets/images/hm40.jpg"></p>
+                    <p><img src="../resource/leifeng/assets/images/hm40.jpg"></p>
                     <p>解新跑狗</p>
                 </a></li>
             <li><a  href="jingjie/demo7.html">
-                    <p><img src="assets/images/5.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/5.png"></p>
                     <p>金信分析</p>
                 </a></li>
             <li><a  href="jingjie/demo8.html">
-                    <p><img src="assets/images/4.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/4.png"></p>
                     <p>解梅花诗</p>
                 </a></li>
             <li><a  href="jingjie/demo9.html">
-                    <p><img src="assets/images/3.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/3.png"></p>
                     <p>跑狗解析</p>
                 </a></li>
             <li><a  href="jingjie/demo10.html">
-                    <p><img src="assets/images/2.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/2.png"></p>
                     <p>解藏宝图</p>
                 </a></li>
             <li><a  href="jingjie/demo11.html">
-                    <p><img src="assets/images/1.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/1.png"></p>
                     <p>红字解析</p>
                 </a></li>
             <li><a  href="https://666hhh.app/">
-                    <p><img src="assets/images/10.png"></p>
+                    <p><img src="../resource/leifeng/assets/images/10.png"></p>
                     <p>六合宝典</p>
                 </a></li>
         </ul>
     </div>
 </div>
 <div class="white-box">
-    <img src="assets/images/18123.gif" alt="">
+    <img src="../resource/leifeng/assets/images/18123.gif" alt="">
 </div>
 <div class="white-box">
     <ul class="banzhu">
@@ -93,12 +96,12 @@
         </a>
     </div>
 </div>
-<div class="white-box"><img src="assets/images/88666666.gif" alt=""></div>
+<div class="white-box"><img src="../resource/leifeng/assets/images/88666666.gif" alt=""></div>
 
 
 <div class="white-box">
     <div class="cgi-gsb">
-        <div class="cgi-gsb-header"><img src="assets/images/gsb.jpg"></div>
+        <div class="cgi-gsb-header"><img src="../resource/leifeng/assets/images/gsb.jpg"></div>
         <ul>
             <li>
                 <span class="cgi-zuozhe">雷锋论坛</span>
@@ -123,7 +126,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">至鲁大师</span>
-                <a target="_blank" href="topic2/demo6.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo6.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【三头中特】</font>
                     <font color="#ff0066">（21中20）</font>
@@ -131,7 +134,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">陈玉莲</span>
-                <a target="_blank" href="topic2/demo7.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo7.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【天地中特】</font>
                     <font color="#ff0066">（22中20）</font><br>
@@ -139,7 +142,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">长时记忆</span>
-                <a target="_blank" href="topic2/demo8.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo8.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【十码中特】</font>
                     <font color="#ff0066">（09中08）</font><br>
@@ -147,7 +150,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">不中玩家</span>
-                <a target="_blank" href="topic2/demo9.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo9.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【五不中】</font>
                     <font color="#ff0066">（11中10）</font><br>
@@ -155,7 +158,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">赵老头</span>
-                <a target="_blank" href="topic2/demo10.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo10.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【15码中特】</font>
                     <font color="#ff0066">（09中08）</font>
@@ -163,7 +166,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">大福袋</span>
-                <a target="_blank" href="topic2/demo11.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo11.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【平特一肖】</font>
                     <font color="#ff0066">（19中17）</font><br>
@@ -171,7 +174,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">平特大神</span>
-                <a target="_blank" href="topic2/demo12.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo12.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【精准平特】</font>
                     <font color="#ff0066">（16中15）</font><br>
@@ -179,7 +182,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">酒仙桥</span>
-                <a target="_blank" href="topic2/demo13.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo13.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff2d51">120期：</font>
                     <font color="#0000ff">【单双中特】</font>
                     <font color="#ff2d51">（13中13）</font>
@@ -187,7 +190,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">大小专家</span>
-                <a target="_blank" href="topic2/demo14.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo14.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【大小中特】</font>
                     <font color="#ff0066">（15中14）</font><br>
@@ -195,7 +198,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">绝品四尾</span>
-                <a target="_blank" href="topic2/demo15.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo15.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【四尾中特】</font>
                     <font color="#ff0066">（14中13）</font><br>
@@ -203,7 +206,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">世间第一</span>
-                <a target="_blank" href="opic2/demo16.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="opic2/demo16.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【肆肖中特】</font>
                     <font color="#ff0066">（12中10）</font><br>
@@ -211,7 +214,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">江小白</span>
-                <a target="_blank" href="topic2/demo17.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo17.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【平特一肖】</font>
                     <font color="#ff0066">（22中20）</font><br>
@@ -219,7 +222,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">江山才人</span>
-                <a target="_blank" href="topic2/demo18.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo18.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【二头中特】</font>
                     <font color="#ff0066">（10中09）</font><br>
@@ -227,7 +230,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">梦幻流星</span>
-                <a target="_blank" href="topic2/demo19.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo19.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【一头中特】</font>
                     <font color="#ff0066">（10中09）</font><br>
@@ -235,7 +238,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">世纪新城</span>
-                <a target="_blank" href="topic2/demo20.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo20.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【三行中特】</font>
                     <font color="#ff0066">（13中13）</font><br>
@@ -243,7 +246,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">量子动态</span>
-                <a target="_blank" href="topic2/demo21.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo21.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【单双中特】</font>
                     <font color="#ff0066">（14中13）</font><br>
@@ -251,7 +254,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">草堂瑰宝</span>
-                <a target="_blank" href="topic2/demo22.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo22.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【平特一肖】</font>
                     <font color="#ff0066">（16中15）</font><br>
@@ -259,7 +262,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">高手玩家</span>
-                <a target="_blank" href="topic2/demo23.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo23.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【单双三肖】</font>
                     <font color="#ff0066">（14中13）</font><br>
@@ -267,7 +270,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">麦氏情歌</span>
-                <a target="_blank" href="topic2/demo24.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo24.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【大小十码】</font>
                     <font color="#ff0066">（11中10）</font>
@@ -275,7 +278,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">幽灵猎人</span>
-                <a target="_blank" href="topic2/demo25.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo25.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【阴阳中特】</font>
                     <font color="#ff0066">（18中18）</font><br>
@@ -283,7 +286,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">绝算彩票</span>
-                <a target="_blank" href="topic2/demo26.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo26.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【四六九肖】</font>
                     <font color="#ff0066">（13中12）</font><br>
@@ -291,7 +294,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">梦之泪伤</span>
-                <a target="_blank" href="topic2/demo27.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo27.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【六肖中特】</font>
                     <font color="#ff0066">（15中15）</font>
@@ -299,7 +302,7 @@
             </li>
             <li>
                 <span class="cgi-zuozhe">刘翔哥哥</span>
-                <a target="_blank" href="topic2/demo28.html"><img src="assets/images/jinpai.gif">
+                <a target="_blank" href="topic2/demo28.html"><img src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#ff0000">120期：</font>
                     <font color="#0000ff">【四肖八码】</font>
                     <font color="#ff0066">（13中12）</font><br>
@@ -308,7 +311,7 @@
             <li>
                 <span class="cgi-zuozhe">手机开奖</span>
                 <a  href="javascript:(0)"><img
-                        src="assets/images/jinpai.gif">
+                        src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#003371">【手机开奖】</font>
                     <font color="#ff0000">百开百中例无虚开</font>
                 </a>
@@ -316,7 +319,7 @@
             <li>
                 <span class="cgi-zuozhe">极速开奖</span>
                 <a  href="javasript:void(0)"><img
-                        src="assets/images/jinpai.gif">
+                        src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#003371">【极速开奖】</font>
                     <font color="#ff0000">瑞士金表无比准确</font>
                 </a>
@@ -324,7 +327,7 @@
             <li>
                 <span class="cgi-zuozhe">六六之家</span>
                 <a  href="javasript:void(0)"><img
-                        src="assets/images/jinpai.gif">
+                        src="../resource/leifeng/assets/images/jinpai.gif">
                     <font color="#003371">【新粤彩报社】</font>
                     <font color="#ff0000">七星彩--农村医药报新粤彩</font>
                 </a>
@@ -335,7 +338,7 @@
 <div class="gsb3 clearfix">
     <div class="gsb3-l">
         <div class="cgi-gsb2-tit">
-            <img src="assets/images/i-zl.png">原创资料</div>
+            <img src="../resource/leifeng/assets/images/i-zl.png">原创资料</div>
         <ul>
             <li>
                 <a href="javascript:void(0)" ><span class="gsb3-num">01</span>120期：<font color="#f00056">
@@ -368,7 +371,7 @@
     </div>
     <div class="gsb3-r">
         <div class="cgi-gsb2-tit">
-            <img src="assets/images/i-zl.png">早料更新</div>
+            <img src="../resource/leifeng/assets/images/i-zl.png">早料更新</div>
         <ul>
             <li>
                 <a href="javascript:void(0)" ><span class="gsb3-num">10</span>120期：<font color="#f00056">

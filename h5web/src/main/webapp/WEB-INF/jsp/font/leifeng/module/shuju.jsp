@@ -1,6 +1,8 @@
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <div align="center" class="white-box">
-        <img id="shymImg" src="assets/images/shym.jpg" >
+        <img id="shymImg" src="../resource/leifeng/assets/images/shym.jpg" >
         <div class="bizhong-page">
             <span class="bizhong-btn bizhong-pre" onclick="shymPre()">上一期</span> <span class="bizhong-btn bizhong-next" onclick="shymNext()">下一期</span></div>
     </div>
@@ -18,7 +20,7 @@
             </div>
         </div>
 <div class="white-box">
-    <img src="assets/images/553300.jpg" alt="">
+    <img src="../resource/leifeng/assets/images/553300.jpg" alt="">
 </div>
 
 <div class="white-box">
@@ -39,17 +41,17 @@
     </div>
 </div>
 <div class="mt-10">
-    <a href="javascript:void(0)"><img src="assets/images/sjtk.png" alt=""></a>
+    <a href="javascript:void(0)"><img src="../resource/leifeng/assets/images/sjtk.png" alt=""></a>
     <div class="mt-10-title">
         <a href="javascript:void(0)">
-            <img src="assets/images/zu.gif" alt=""><span>妈的连准16期的15码到现在我才发现！</span>
+            <img src="../resource/leifeng/assets/images/zu.gif" alt=""><span>妈的连准16期的15码到现在我才发现！</span>
         </a>
     </div>
     <a href="javascript:void(0)">
-        <img src="assets/images/wan88.gif" alt="">
+        <img src="../resource/leifeng/assets/images/wan88.gif" alt="">
     </a>
     <a href="javascript:void(0)">
-        <img src="assets/images/app88.png" alt=""></a>
+        <img src="../resource/leifeng/assets/images/app88.png" alt=""></a>
 </div>
 <div class="mt-10">
     <table class="table-links-green" width="100%" border="1">

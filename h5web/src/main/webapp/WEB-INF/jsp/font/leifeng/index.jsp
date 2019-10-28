@@ -27,14 +27,20 @@
 <body>
     <div id="wrapper" class="wrapper">
 		<div class="content">
-            <%@ include file="module/header.jsp" %>
-<%--            <div id="header" class="__html_module" data-tmpl="../jsp/font/leifeng/module/header.html"></div>--%>
-            <div  class="__html_module" data-tmpl="../resource/leifeng/module/opening.html"></div>
-            <div  class="__html_module" data-tmpl="../resource/leifeng/module/jingjie.html"></div>
-            <div  class="__html_module" data-tmpl="../resource/leifeng/module/haoliao.html"></div>
-            <div  class="__html_module" data-tmpl="../resource/leifeng/module/shuju.html"></div>
+<%--            <div id="header" class="__html_module" data-tmpl="../jsp/font/leifeng/module/header.html"><%@ include file="module/header.jsp" %></div>--%>
+            <div id="header" class="__html_module" ><%@ include file="module/header.jsp" %></div>
+<%--            <%@ include file="module/opening.jsp" %>--%>
+<%--            <div  class="__html_module" data-tmpl="../resource/leifeng/module/opening.html"></div>--%>
+            <div  class="__html_module" ><%@ include file="module/opening.jsp" %></div>
+
+            <div  class="__html_module" ><%@ include file="module/jingjie.jsp" %></div>
+<%--            <div  class="__html_module" data-tmpl="../resource/leifeng/module/haoliao.html"></div>--%>
+            <div  class="__html_module"><%@ include file="module/haoliao.jsp" %></div>
+<%--            <div  class="__html_module" data-tmpl="../resource/leifeng/module/shuju.html"></div>--%>
+            <div  class="__html_module"><%@ include file="module/shuju.jsp" %></div>
         </div>
+<%--		<div id="footer" class="__html_module" ><%@ include file="module/footer.jsp" %></div>--%>
 		<div id="footer" class="__html_module" data-tmpl="../resource/leifeng/module/footer.html"></div>
-    </div>      
+    </div>
 </body>
 </html>
