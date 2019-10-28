@@ -5,8 +5,38 @@
 <div class="opening">
     <div class="result">
         <div class="model latestrecord">
-            <div id="recordLatestItem"></div>
-            <div id="recordCurrentItem"></div>
+            <div id="recordLatestItem">
+                <div class="recordItem">
+                    <p>六合彩开奖直播 2019年10月26日 第120期</p>
+                    <%--{{html $item.htmlGameResultItem($data)}}--%>
+                    <div class="resultDetail">
+                        <p class="result_first">
+                            <a href="javascript:void(0);" class="green" ><span>49</span></a>
+                            <a href="javascript:void(0);" class="green" ><span>49</span></a>
+                            <a href="javascript:void(0);" class="green" ><span>49</span></a>
+                            <a href="javascript:void(0);" class="green" ><span>49</span></a>
+                            <a href="javascript:void(0);" class="green" ><span>49</span></a>
+                            <a href="javascript:void(0);" class="green" ><span>49</span></a>
+                            <a href="javascript:void(0);" class="green" ><span>49</span></a>
+                            <a href="javascript:void(0);" class="green" ><span>49</span></a>
+                        </p>
+                        <p class="result_sec"></p>
+                        <div class="clearfix">
+                            <a href="javascript:void(0);"><span>猪&nbsp;/&nbsp;金</span></a>
+                            <a href="javascript:void(0);"><span>鼠&nbsp;/&nbsp;水</span></a>
+                            <a href="javascript:void(0);"><span>羊&nbsp;/&nbsp;木</span></a>
+                            <a href="javascript:void(0);"><span>马&nbsp;/&nbsp;土</span></a>
+                            <a href="javascript:void(0);"><span>猴&nbsp;/&nbsp;木</span></a>
+                            <a href="javascript:void(0);"><span>猪&nbsp;/&nbsp;木</span></a>
+                            <a href="javascript:void(0);" class="plugin"><span>&nbsp;</span></a>
+                            <a href="javascript:void(0);"><span>鼠&nbsp;/&nbsp;木</span></a>
+                            <p></p></div>
+                    </div>
+                </div>
+            </div>
+            <div id="recordCurrentItem">
+                <div class="nextDrawItem">   第121期开奖时间: 2019年10月29日 星期二 21时30分 </div>
+            </div>
         </div>       
 
         <ul class="open-record">            
@@ -190,14 +220,9 @@
 </script>
 <!-- </div> -->
 
-<script id="recordTmpl" type="text/x-jquery-tmpl">
-<div class="recordItem">{{html $item.htmlGameResultItem($data)}}</div>
-</script>
-<script id="nextDrawItemTmpl" type="text/x-jquery-tmpl">
-<div class="nextDrawItem">
-  第${$item.getQihao(comp_id.drawId)}期开奖时间: ${$item.dateToString(closeTime,"yyyy年MM月dd日 W hh时mm分")}
-</div>
-</script>
+
+
+
 
 <script type="text/javascript">
   require(['jquery','tmpl','lib/jquery.tmpl.ext'],function($){

@@ -13,6 +13,7 @@ public class LeiFengIndexController {
     @RequestMapping("/index")
     public ModelAndView index(HttpServletRequest request){
         ModelAndView modelAndView = new ModelAndView("font/leifeng/index");
+
         return modelAndView;
     }
 }
