@@ -49,19 +49,23 @@
             enableCountByExample、enableSelectByExample、enableDeleteByExample、enableUpdateByExample、selectByExampleQueryId：
             去除自动生成的例子
         -->
-        <table schema="" tableName="L_M2" domainObjectName="LM2" enableCountByExample="false" enableSelectByExample="false"
+        <table schema="" tableName="GAME_DRAW" domainObjectName="GameDraw" enableCountByExample="false" enableSelectByExample="false"
                enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
         </table>
-        <table schema="" tableName="L_M3" domainObjectName="LM3" enableCountByExample="false" enableSelectByExample="false"
+        <table schema="" tableName="GAME_DRAW_OP" domainObjectName="GameDrawOp" enableCountByExample="false" enableSelectByExample="false"
                enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
         </table>
-        <table schema="" tableName="L_M4" domainObjectName="LM4" enableCountByExample="false" enableSelectByExample="false"
+        <table schema="" tableName="GAME_PUBLIC" domainObjectName="GamePublic" enableCountByExample="false" enableSelectByExample="false"
                enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
         </table>
-        <table schema="" tableName="L_M5" domainObjectName="LM5" enableCountByExample="false" enableSelectByExample="false"
+        <table schema="" tableName="PAPERS_LIST" domainObjectName="PapersList" enableCountByExample="false" enableSelectByExample="false"
                enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
         </table>
-        <table schema="" tableName="L_M52" domainObjectName="LM52" enableCountByExample="false" enableSelectByExample="false"
+
+        <table schema="" tableName="PAPERS_PICTURE" domainObjectName="PapersPicture" enableCountByExample="false" enableSelectByExample="false"
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <!--<table schema="" tableName="L_M52" domainObjectName="LM52" enableCountByExample="false" enableSelectByExample="false"
                enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
         </table>
         <table schema="" tableName="L_M6" domainObjectName="LM6" enableCountByExample="false" enableSelectByExample="false"
@@ -74,8 +78,8 @@
                enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
         </table>
         <table schema="" tableName="L_M8" domainObjectName="LM8" enableCountByExample="false" enableSelectByExample="false"
-               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >
-        </table>
+               enableDeleteByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" >-->
+        <!--</table>-->
     </context>
 
 </generatorConfiguration>

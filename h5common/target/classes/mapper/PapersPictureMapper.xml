@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.h5.mapper.PapersPictureMapper" >
+  <resultMap id="BaseResultMap" type="com.h5.entity.PapersPicture" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="draw_id" property="drawId" jdbcType="VARCHAR" />
+    <result column="papers_id" property="papersId" jdbcType="INTEGER" />
+    <result column="papers_name" property="papersName" jdbcType="VARCHAR" />
+    <result column="first_letter" property="firstLetter" jdbcType="CHAR" />
+    <result column="picture_a_url" property="pictureAUrl" jdbcType="VARCHAR" />
+    <result column="picture_b_url" property="pictureBUrl" jdbcType="VARCHAR" />
+    <result column="picture_c_url" property="pictureCUrl" jdbcType="VARCHAR" />
+    <result column="picture_d_url" property="pictureDUrl" jdbcType="VARCHAR" />
+    <result column="upload_time" property="uploadTime" jdbcType="TIMESTAMP" />
+    <result column="publish_time" property="publishTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="oper_id" property="operId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, draw_id, papers_id, papers_name, first_letter, picture_a_url, picture_b_url, 
+    picture_c_url, picture_d_url, upload_time, publish_time, status, oper_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from PAPERS_PICTURE
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from PAPERS_PICTURE
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.h5.entity.PapersPicture" >
+    insert into PAPERS_PICTURE (id, draw_id, papers_id, 
+      papers_name, first_letter, picture_a_url, 
+      picture_b_url, picture_c_url, picture_d_url, 
+      upload_time, publish_time, status, 
+      oper_id)
+    values (#{id,jdbcType=INTEGER}, #{drawId,jdbcType=VARCHAR}, #{papersId,jdbcType=INTEGER}, 
+      #{papersName,jdbcType=VARCHAR}, #{firstLetter,jdbcType=CHAR}, #{pictureAUrl,jdbcType=VARCHAR}, 
+      #{pictureBUrl,jdbcType=VARCHAR}, #{pictureCUrl,jdbcType=VARCHAR}, #{pictureDUrl,jdbcType=VARCHAR}, 
+      #{uploadTime,jdbcType=TIMESTAMP}, #{publishTime,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, 
+      #{operId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.h5.entity.PapersPicture" >
+    insert into PAPERS_PICTURE
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="drawId != null" >
+        draw_id,
+      </if>
+      <if test="papersId != null" >
+        papers_id,
+      </if>
+      <if test="papersName != null" >
+        papers_name,
+      </if>
+      <if test="firstLetter != null" >
+        first_letter,
+      </if>
+      <if test="pictureAUrl != null" >
+        picture_a_url,
+      </if>
+      <if test="pictureBUrl != null" >
+        picture_b_url,
+      </if>
+      <if test="pictureCUrl != null" >
+        picture_c_url,
+      </if>
+      <if test="pictureDUrl != null" >
+        picture_d_url,
+      </if>
+      <if test="uploadTime != null" >
+        upload_time,
+      </if>
+      <if test="publishTime != null" >
+        publish_time,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="operId != null" >
+        oper_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="drawId != null" >
+        #{drawId,jdbcType=VARCHAR},
+      </if>
+      <if test="papersId != null" >
+        #{papersId,jdbcType=INTEGER},
+      </if>
+      <if test="papersName != null" >
+        #{papersName,jdbcType=VARCHAR},
+      </if>
+      <if test="firstLetter != null" >
+        #{firstLetter,jdbcType=CHAR},
+      </if>
+      <if test="pictureAUrl != null" >
+        #{pictureAUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="pictureBUrl != null" >
+        #{pictureBUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="pictureCUrl != null" >
+        #{pictureCUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="pictureDUrl != null" >
+        #{pictureDUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadTime != null" >
+        #{uploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="publishTime != null" >
+        #{publishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="operId != null" >
+        #{operId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.h5.entity.PapersPicture" >
+    update PAPERS_PICTURE
+    <set >
+      <if test="drawId != null" >
+        draw_id = #{drawId,jdbcType=VARCHAR},
+      </if>
+      <if test="papersId != null" >
+        papers_id = #{papersId,jdbcType=INTEGER},
+      </if>
+      <if test="papersName != null" >
+        papers_name = #{papersName,jdbcType=VARCHAR},
+      </if>
+      <if test="firstLetter != null" >
+        first_letter = #{firstLetter,jdbcType=CHAR},
+      </if>
+      <if test="pictureAUrl != null" >
+        picture_a_url = #{pictureAUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="pictureBUrl != null" >
+        picture_b_url = #{pictureBUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="pictureCUrl != null" >
+        picture_c_url = #{pictureCUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="pictureDUrl != null" >
+        picture_d_url = #{pictureDUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadTime != null" >
+        upload_time = #{uploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="publishTime != null" >
+        publish_time = #{publishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="operId != null" >
+        oper_id = #{operId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.h5.entity.PapersPicture" >
+    update PAPERS_PICTURE
+    set draw_id = #{drawId,jdbcType=VARCHAR},
+      papers_id = #{papersId,jdbcType=INTEGER},
+      papers_name = #{papersName,jdbcType=VARCHAR},
+      first_letter = #{firstLetter,jdbcType=CHAR},
+      picture_a_url = #{pictureAUrl,jdbcType=VARCHAR},
+      picture_b_url = #{pictureBUrl,jdbcType=VARCHAR},
+      picture_c_url = #{pictureCUrl,jdbcType=VARCHAR},
+      picture_d_url = #{pictureDUrl,jdbcType=VARCHAR},
+      upload_time = #{uploadTime,jdbcType=TIMESTAMP},
+      publish_time = #{publishTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=INTEGER},
+      oper_id = #{operId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
