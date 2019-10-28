@@ -1,5 +1,6 @@
 com\h5\service\lm\impl\LM3ServiceImp.class
 com\h5\service\lm\impl\LM7ServiceImp.class
+com\h5\service\leifont\GameDrawOpService.class
 com\h5\service\lm\impl\LM6ServiceImp.class
 com\h5\service\lm\impl\LM52ServiceImp.class
 com\h5\service\lm\Lm62Service.class
@@ -8,6 +9,7 @@ com\h5\service\lm\Lm4Service.class
 com\h5\service\lm\Lm5Service.class
 com\h5\service\lm\Lm6Service.class
 com\h5\service\lm\Lm52Service.class
+com\h5\service\leifont\impl\GameDrawOpServiceImpl.class
 com\h5\service\lm\impl\LM1ServiceImp.class
 com\h5\service\lm\impl\LM4ServiceImp.class
 com\h5\service\lm\impl\LM62ServiceImp.class

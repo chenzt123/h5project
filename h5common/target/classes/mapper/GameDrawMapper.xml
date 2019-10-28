@@ -18,6 +18,12 @@
     where draw_id = #{drawId,jdbcType=VARCHAR}
       and game_code = #{gameCode,jdbcType=VARCHAR}
   </select>
+  <select id="getIndexNextDate" resultType="java.util.Map">
+    select top 1
+    <include refid="Base_Column_List" />
+    from GAME_DRAW
+    where close_time &gt; GETDATE() ORDER BY close_time asc
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="com.h5.entity.GameDrawKey" >
     delete from GAME_DRAW
     where draw_id = #{drawId,jdbcType=VARCHAR}

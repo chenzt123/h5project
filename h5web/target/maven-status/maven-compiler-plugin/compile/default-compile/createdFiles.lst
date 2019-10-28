@@ -1,4 +1,5 @@
 com\h5\controller\font\leifeng\LeiFengIndexController.class
+com\h5\controller\font\leifeng\LeiFengRecordController.class
 com\h5\controller\lm\Lm5Controller.class
 com\h5\controller\lm\Lm8Controller.class
 com\h5\controller\lm\Lm4Controller.class

@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div id="recordCurrentItem">
-                <div class="nextDrawItem">   第121期开奖时间: 2019年10月29日 星期二 21时30分 </div>
+                <div class="nextDrawItem">   第${nextMap.draw_id}期开奖时间: 2019年10月29日 星期二 21时30分 </div>
             </div>
         </div>       
 

@@ -47,8 +47,48 @@
                     </select></span>
                 </h2>              
             </div>
-            <!-- 游戏列表 -->
+
+
             <div id="gamedraw_list"></div>
+            <ul>
+                <li>
+                    <p>六合彩开奖直播 2019年10月26日 第120期</p>
+                    <div class="resultDetail">
+                     <p class="result_first">
+                     <a href="javascript:void(0);" class="green">
+                         <span>49</span></a><a href="javascript:void(0);" class="red"><span>24</span></a>
+                         <a href="javascript:void(0);" class="green"><span>17</span></a>
+                         <a href="javascript:void(0);" class="red"><span>30</span></a>
+                         <a href="javascript:void(0);" class="red"><span>40</span></a>
+                         <a href="javascript:void(0);" class="red"><span>01</span></a>
+                         <a href="javascript:void(0);" class="plugin"><span>+</span></a>
+                         <a href="javascript:void(0);" class="blue"><span>48</span></a>
+                     </p>
+                     <p class="result_sec"></p>
+                        <div class="clearfix"><a href="javascript:void(0);"><span>猪&nbsp;/&nbsp;金</span></a>
+                         <a href="javascript:void(0);"><span>鼠&nbsp;/&nbsp;水</span></a>
+                            <a href="javascript:void(0);"><span>羊&nbsp;/&nbsp;木</span></a>
+                            <a href="javascript:void(0);"><span>马&nbsp;/&nbsp;土</span></a>
+                            <a href="javascript:void(0);"><span>猴&nbsp;/&nbsp;木</span></a>
+                            <a href="javascript:void(0);"><span>猪&nbsp;/&nbsp;木</span></a>
+                            <a href="javascript:void(0);" class="plugin"><span>&nbsp;</span>
+                            </a><a href="javascript:void(0);"><span>鼠&nbsp;/&nbsp;木</span>
+                            </a>
+                            <p></p>
+                        </div></div>
+
+
+
+
+                </li>
+            </ul>
+
+
+
+
+
+            <!-- 游戏列表 -->
+            <%--<div id="gamedraw_list"></div>
             <script type="text/javascript"> 
             require(['jquery','tmpl','lib/jquery.tmpl.ext'],function($){
                 $(document).ready(function(){ 
@@ -122,7 +162,7 @@
                     getDrawListByTmpl('src/gamedraw/list.html',{});
                 });
             });
-        </script>
+        </script>--%>
         </div>
 		<div id="footer" class="__html_module" data-tmpl="module/footer.html"></div>
     </div>      
