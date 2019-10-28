@@ -1,0 +1,11 @@
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend,header,nav,footer,menu,section,aside,article,canvas,figure,figcaption{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img { max-width: 100%; }
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";margin:0 auto;}
+input,a{outline:none;}
+body{background: #f3f3f3;}
+.clearfix{clear: both;}
+body{font-size:0.875em;}

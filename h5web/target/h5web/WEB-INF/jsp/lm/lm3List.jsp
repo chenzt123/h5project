@@ -44,7 +44,7 @@
         <colgroup>
         <col width="50px">
         <col width="10%">
-         <col width="20%">
+        <col width="20%">
         <col>
         <col width="10%">
         </colgroup>
