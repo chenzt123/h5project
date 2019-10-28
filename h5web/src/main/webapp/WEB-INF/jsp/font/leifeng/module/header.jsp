@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
-<div id="header" class="__html_module">
 <div class="header inline-block">
     <a href="javascript:void(0)"><img src="../resource/leifeng/assets/images/header.jpg" alt=""></a>
     
@@ -26,10 +25,9 @@
 <div class="header inline-block">
 <div class="header-banner">
         <ul>
-            <li><img src="assets/images/IMG_0806.JPG" alt=""></li>
-            <li><img src="assets/images/IMG_0807.JPG" alt=""></li>
-            <li><img src="assets/images/IMG_0808.JPG" alt=""></li>
+            <li><img src="../resource/leifeng/assets/images/IMG_0806.JPG" alt=""></li>
+            <li><img src="../resource/leifeng/assets/images/IMG_0807.JPG" alt=""></li>
+            <li><img src="../resource/leifeng/assets/images/IMG_0808.JPG" alt=""></li>
         </ul>
     </div>
     </div>
-</div>

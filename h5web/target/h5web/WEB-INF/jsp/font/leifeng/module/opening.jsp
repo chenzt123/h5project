@@ -1,3 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="drawitem"></div>
 <div class="opening">
     <div class="result">
@@ -49,21 +52,21 @@
         <ul>
             <li>
                 <a target="_blank" href="http://570655.com">
-                    <img src="assets/images/logo-88.jpg">
+                    <img src="../resource/leifeng/assets/images/logo-88.jpg">
                     <h2><span>57开奖手机站</span> <span>570655.com</span></h2>
                     <div><span>点击访问</span></div>
                 </a>
             </li>
             <li>
                 <a target="_blank" href="http://654155.com/">
-                    <img src="assets/images/logo-123.jpg">
+                    <img src="../resource/leifeng/assets/images/logo-123.jpg">
                     <h2><span>654手机开奖</span> <span>654155.com</span></h2>
                     <div><span>点击访问</span></div>
                 </a>
             </li>
             <li>
                 <a target="_blank" href="https://www.543155.com">
-                    <img src="assets/images/logo-118.jpg">
+                    <img src="../resource/leifeng/assets/images/logo-118.jpg">
                     <h2><span>543手机开奖</span> <span>543155.com</span></h2>
                     <div><span>点击访问</span></div>
                 </a>
@@ -92,7 +95,7 @@
         <img src="assets/images/18123.gif" alt="">
     </div>
     <div class="white-box"><a target="_blank" href="javascript:void(0)">
-        <img src="assets/images/gsb.jpg" width="100%" height="auto"></a>
+        <img src="../resource/leifeng/assets/images/gsb.jpg" width="100%" height="auto"></a>
     <div id="ptyx-jplx">
         <div class="Menubox">
             <ul>

@@ -1,8 +1,11 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="redpackage">
-    <img src="assets/images/zzhl.png">
-    <img src="assets/images/hb.jpg" alt="">
-    <img src="assets/images/pyq.jpg" alt="">
-    <img src="assets/images/p9.jpg" alt="">
+    <img src="../resource/leifeng/assets/images/zzhl.png">
+    <img src="../resource/leifeng/assets/images/hb.jpg" alt="">
+    <img src="../resource/leifeng/assets/images/pyq.jpg" alt="">
+    <img src="../resource/leifeng/assets/images/p9.jpg" alt="">
 </div>
 <div class="cgi-kjjl-box">
 <div class="kjjl-tit"><span>雷锋站长解狗诗</span></div>
@@ -51,42 +54,42 @@
 		</div>
 </div>
 <div class="white-box">
-    <img src="assets/images/hb.jpg" alt="">
-    <img src="assets/images/pyq.jpg" alt="">
+    <img src="../resource/leifeng/assets/images/hb.jpg" alt="">
+    <img src="../resource/leifeng/assets/images/pyq.jpg" alt="">
 </div>
 <div class="mt10" style="display:none;">
     <div class="lctz">
         <div class="lctz-tit">
-            <img src="assets/images/lctz-tit.jpg"></div>
+            <img src="../resource/leifeng/assets/images/lctz-tit.jpg"></div>
         <ul>
             <li>
                 <span>
                     <font color="#FF0000">马云理财</font>
-                </span><a href="javascript:void(0)" target="_blank"><img src="assets/images/zu.gif">
+                </span><a href="javascript:void(0)" target="_blank"><img src="../resource/leifeng/assets/images/zu.gif">
                     <font color="#FF0000">120期：全网头条【理财六肖】已公开</font>
                 </a></li>
             <li>
                 <span>
                     <font color="#009900">圆通投资</font>
-                </span><a href="javascript:void(0)" target="_blank"><img src="assets/images/zu.gif">
+                </span><a href="javascript:void(0)" target="_blank"><img src="../resource/leifeng/assets/images/zu.gif">
                     <font color="#009900">120期：公开必中【成语一肖】已公开</font>
                 </a></li>
             <li>
                 <span>
                     <font color="#FF00FF">平安理财</font>
-                </span><a href="javascript:void(0)" target="_blank"><img src="assets/images/zu.gif">
+                </span><a href="javascript:void(0)" target="_blank"><img src="../resource/leifeng/assets/images/zu.gif">
                     <font color="#FF00FF">120期：稳定投资【爆发六肖】已公开</font>
                 </a></li>
             <li>
                 <span>
                     <font color="#0eb83a">支付理财</font>
-                </span><a href="javascript:void(0)" target="_blank"><img src="assets/images/zu.gif">
+                </span><a href="javascript:void(0)" target="_blank"><img src="../resource/leifeng/assets/images/zu.gif">
                     <font color="#0eb83a">120期：镇坛之宝【理财平特】已公开</font>
                 </a></li>
             <li>
                 <span>
                     <font color="#801dae">小米投资</font>
-                </span><a href="javascript:void(0)" target="_blank"><img src="assets/images/zu.gif">
+                </span><a href="javascript:void(0)" target="_blank"><img src="../resource/leifeng/assets/images/zu.gif">
                     <font color="#801dae">120期：苦心专研【财富六肖】已公开</font>
                 </a></li>
         </ul>
@@ -229,5 +232,5 @@
         <!--117期结束--></div>
 <div class="clearfix"></div>
 <div class="white-box">
-    <img src="assets/images/18123.gif" alt="">
+    <img src="../resource/leifeng/assets/images/18123.gif" alt="">
 </div>
