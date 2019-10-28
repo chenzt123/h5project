@@ -1,3 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +12,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>六合论坛</title>
     <base href="">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-<link rel="stylesheet" type="text/css" href="assets/css/model.css">
-    <link rel="stylesheet" type="text/css" href="lib/layer/theme/default/layer.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../resource/leifeng/assets/css/reset.css">
+<link rel="stylesheet" type="text/css" href="../resource/leifeng/assets/css/model.css">
+    <link rel="stylesheet" type="text/css" href="../resource/lib/layer/theme/default/layer.css">
+    <link rel="stylesheet" type="text/css" href="../resource/leifeng/assets/css/layout.css">
     <script type="text/javascript">
         var baseUrl = "";
         var rserver = "http://formu-frontendweb.dj789.net/";
