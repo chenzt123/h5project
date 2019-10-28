@@ -239,7 +239,7 @@
                                 </dl>
                             </dd>
                             <dd>
-                                <a href="javascript:;">雷</a>
+                                <a href="javascript:;">雷锋论坛</a>
                                 <dl class="layui-nav-child">
                                     <dd><a lay-href="/lm1/list">平特-肖王</a></dd>
                                     <dd><a lay-href="/lm2/list">平特计划</a></dd>

@@ -1,0 +1,73 @@
+.resultDetail a.green {background: url(../images/ball-green.png) center top / contain no-repeat;}
+.resultDetail a.red {background: url(../images/ball-red.png) center top / contain no-repeat;}
+.resultDetail a.blue {background: url(../images/ball-blue.png) center top / contain no-repeat;}
+
+.model.latestrecord { margin:10px 0; padding-bottom:10px; height:auto; }
+.model.latestrecord .recordItem  p{ color:#333;font-size:1em; margin:0 0 10px; line-height:32px;text-indent: 20px;}
+.model.latestrecord .recordItem .resultDetail a{width:12.5%;display:block;float:left;height:40px;text-align:center}
+.model.latestrecord .recordItem .resultDetail a span{font-size:0.875em; }
+.model.latestrecord .recordItem .result_first a span{line-height:32px;font-size:1.5em; margin-left:-20px; color:#333;text-align:center;font-weight:bold}
+.model.latestrecord .recordItem .result_first .plugin span{font-size:1.75em;color:#ccc;}
+.model.latestrecord .recordItem .result_sec span{line-height:30px}
+.model.latestrecord #recordCurrentItem { clear:both; width:100%; line-height:34px; text-align:center; font-size:1.2em; }
+/* 开奖结果 */
+#gamedraw_list{background:#fff;padding-bottom:130px}
+#gamedraw_list li{ margin:8px;line-height:20px; display:inline-block;width:100%;
+ border-bottom:dotted 1px #a0a0a0; padding:5px 0; }
+#gamedraw_list li > p{ color:#333;font-size:1em; margin:0 0 10px; line-height:32px; text-indent:20px;}
+#gamedraw_list .resultDetail a{width:12.5%;display:block;float:left;height:30px;text-align:center}
+#gamedraw_list .resultDetail a span{font-size:0.875em; }
+#gamedraw_list .result_first a span{margin:0 23%;line-height:26px;font-size:1em;color:#333;text-align:center;font-weight:bold}
+#gamedraw_list .result_first .plugin span{font-size:1.75em;color:#ccc;margin:0 12%}
+#gamedraw_list .result_sec span{line-height:30px}
+
+.yearlist {}
+.yearlist h2 { background:#0063ca none; color:#FFF; padding:10px 10px; font-size:1.2em;  }
+.yearlist h2 select { height:28px; }
+
+/* 开奖走势 */
+.trendChart #recordResult{background:#fff;padding-bottom:130px}
+.trendChart #recordResult .recordItem{ margin:8px;line-height:20px; display:inline-block;width:100%;
+ border-bottom:dotted 1px #a0a0a0; padding:5px 0; }
+.trendChart #recordResult .recordItem > p{ color:#333;font-size:1em; margin:0 0 10px; line-height:32px; text-indent:20px;}
+.trendChart #recordResult .resultDetail a{width:12.5%;display:block;float:left;height:30px;text-align:center}
+.trendChart #recordResult .resultDetail a span{font-size:0.875em; }
+.trendChart #recordResult .result_first a span{margin:0 23%;line-height:26px;font-size:1em;color:#333;text-align:center;font-weight:bold}
+.trendChart #recordResult .result_first .plugin span{font-size:1.75em;color:#ccc;margin:0 12%}
+.trendChart #recordResult .result_sec span{line-height:30px}
+
+.trendChart {background:#fff;padding-bottom:60px}
+.trendChart #swiperBtGroup { display:inline-block; width:100%; border-bottom:dotted 1px #a0a0a0; }
+.trendChart #swiperBtGroup li{width:16.6%;float:left;text-align:center;margin-bottom:8px}
+.trendChart .recordItem p{font-size:0.875em;color:#333}
+.trendChart .recordItem p span{font-size:1.2em;color:#333}
+.trendChart table{border-collapse:collapse;width:100%;padding:0 5px}
+.trendChart table td{text-align:center;border:1px solid #ddd}
+.trendChart table thead th{background:#f8f8f8;padding:8px;font-weight:normal;border:1px solid #ddd}
+.trendChart table td span{width:100%;height:100%;display:block}
+.trendChart table tbody .blue{background:#0000ff;color:#fff}
+.trendChart table tbody .green{background:#009900;color:#fff}
+.trendChart table tbody .red{background:#ff0000;color:#fff}
+
+
+/*图库列表 */
+#category-list {}
+#category-list .category-item { border-bottom:dotted 1px #a0a0a0; padding-bottom:10px; margin-bottom:10px; }
+#category-list .category-item h3 { background:#a0a0a0 none; maring:10px 0; line-height:32px; font-weight:bold;
+text-indent:24px;
+ }
+#category-list .category-item .item-value { padding:0 20px; }
+#category-list .category-item ul { display:inline-block; width:100%; margin:10px 0; }
+#category-list .category-item ul li { display:inline-block; margin-right:20px; }
+#category-list .category-item ul li a { line-height:32px; }
+/*图库具体 */
+.drawid-list {}
+.drawid-list .drawid-title {}
+.drawid-list .drawid-title h3 { background:#a0a0a0 none; maring:10px 0; line-height:32px; font-weight:bold;
+text-indent:24px; }
+.drawid-list .drawid-title ul { height: 80px; overflow-y: scroll; display:inline-block; box-sizing: border-box; padding:10px; width:100%; margin:10px 0; }
+.drawid-list .drawid-title ul li { display:inline-block; margin-right:20px; }
+.drawid-list .drawid-title ul li a { line-height:32px; }
+.drawid-list .img { text-align:center; margin:20px; border:solid 1px #a0a0a0; padding: 20px 10px; }
+.drawid-list .img h2 { margin:0 0 10px 0; }
+.drawid-list #category-img img { max-width: 100%; }
