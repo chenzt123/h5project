@@ -17,7 +17,7 @@
 <div class="menu inline-block add-shade">
     <ul>
         <li><a href="/leifeng/index">论坛首页</a></li>
-        <li><a href="record.html">开奖记录</a></li>
+        <li><a href="record.jsp">开奖记录</a></li>
         <li><a href="trend.html">开奖走势</a></li>
         <li><a href="tongji.html">特码统计</a></li>
         <li><a href="https://666hhh.app/" target="_blank">六合宝典</a></li>

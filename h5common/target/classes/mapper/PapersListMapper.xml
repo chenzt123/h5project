@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.h5.mapper.PapersListMapper" >
+  <resultMap id="BaseResultMap" type="com.h5.entity.PapersList" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="papers_name" property="papersName" jdbcType="VARCHAR" />
+    <result column="first_letter" property="firstLetter" jdbcType="CHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="pic_src_sitecode" property="picSrcSitecode" jdbcType="INTEGER" />
+    <result column="pic_src_sitename" property="picSrcSitename" jdbcType="VARCHAR" />
+    <result column="pic_a_code" property="picACode" jdbcType="VARCHAR" />
+    <result column="pic_b_code" property="picBCode" jdbcType="VARCHAR" />
+    <result column="pic_c_code" property="picCCode" jdbcType="VARCHAR" />
+    <result column="pic_d_code" property="picDCode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, papers_name, first_letter, status, remark, create_time, pic_src_sitecode, pic_src_sitename, 
+    pic_a_code, pic_b_code, pic_c_code, pic_d_code
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from PAPERS_LIST
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from PAPERS_LIST
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.h5.entity.PapersList" >
+    insert into PAPERS_LIST (id, papers_name, first_letter, 
+      status, remark, create_time, 
+      pic_src_sitecode, pic_src_sitename, pic_a_code, 
+      pic_b_code, pic_c_code, pic_d_code
+      )
+    values (#{id,jdbcType=INTEGER}, #{papersName,jdbcType=VARCHAR}, #{firstLetter,jdbcType=CHAR}, 
+      #{status,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{picSrcSitecode,jdbcType=INTEGER}, #{picSrcSitename,jdbcType=VARCHAR}, #{picACode,jdbcType=VARCHAR}, 
+      #{picBCode,jdbcType=VARCHAR}, #{picCCode,jdbcType=VARCHAR}, #{picDCode,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.h5.entity.PapersList" >
+    insert into PAPERS_LIST
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="papersName != null" >
+        papers_name,
+      </if>
+      <if test="firstLetter != null" >
+        first_letter,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="picSrcSitecode != null" >
+        pic_src_sitecode,
+      </if>
+      <if test="picSrcSitename != null" >
+        pic_src_sitename,
+      </if>
+      <if test="picACode != null" >
+        pic_a_code,
+      </if>
+      <if test="picBCode != null" >
+        pic_b_code,
+      </if>
+      <if test="picCCode != null" >
+        pic_c_code,
+      </if>
+      <if test="picDCode != null" >
+        pic_d_code,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="papersName != null" >
+        #{papersName,jdbcType=VARCHAR},
+      </if>
+      <if test="firstLetter != null" >
+        #{firstLetter,jdbcType=CHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="picSrcSitecode != null" >
+        #{picSrcSitecode,jdbcType=INTEGER},
+      </if>
+      <if test="picSrcSitename != null" >
+        #{picSrcSitename,jdbcType=VARCHAR},
+      </if>
+      <if test="picACode != null" >
+        #{picACode,jdbcType=VARCHAR},
+      </if>
+      <if test="picBCode != null" >
+        #{picBCode,jdbcType=VARCHAR},
+      </if>
+      <if test="picCCode != null" >
+        #{picCCode,jdbcType=VARCHAR},
+      </if>
+      <if test="picDCode != null" >
+        #{picDCode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.h5.entity.PapersList" >
+    update PAPERS_LIST
+    <set >
+      <if test="papersName != null" >
+        papers_name = #{papersName,jdbcType=VARCHAR},
+      </if>
+      <if test="firstLetter != null" >
+        first_letter = #{firstLetter,jdbcType=CHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="picSrcSitecode != null" >
+        pic_src_sitecode = #{picSrcSitecode,jdbcType=INTEGER},
+      </if>
+      <if test="picSrcSitename != null" >
+        pic_src_sitename = #{picSrcSitename,jdbcType=VARCHAR},
+      </if>
+      <if test="picACode != null" >
+        pic_a_code = #{picACode,jdbcType=VARCHAR},
+      </if>
+      <if test="picBCode != null" >
+        pic_b_code = #{picBCode,jdbcType=VARCHAR},
+      </if>
+      <if test="picCCode != null" >
+        pic_c_code = #{picCCode,jdbcType=VARCHAR},
+      </if>
+      <if test="picDCode != null" >
+        pic_d_code = #{picDCode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.h5.entity.PapersList" >
+    update PAPERS_LIST
+    set papers_name = #{papersName,jdbcType=VARCHAR},
+      first_letter = #{firstLetter,jdbcType=CHAR},
+      status = #{status,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      pic_src_sitecode = #{picSrcSitecode,jdbcType=INTEGER},
+      pic_src_sitename = #{picSrcSitename,jdbcType=VARCHAR},
+      pic_a_code = #{picACode,jdbcType=VARCHAR},
+      pic_b_code = #{picBCode,jdbcType=VARCHAR},
+      pic_c_code = #{picCCode,jdbcType=VARCHAR},
+      pic_d_code = #{picDCode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

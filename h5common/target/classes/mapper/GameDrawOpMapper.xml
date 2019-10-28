@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.h5.mapper.GameDrawOpMapper" >
+  <resultMap id="BaseResultMap" type="com.h5.entity.GameDrawOp" >
+    <id column="draw_id" property="drawId" jdbcType="VARCHAR" />
+    <id column="game_code" property="gameCode" jdbcType="VARCHAR" />
+    <result column="result" property="result" jdbcType="VARCHAR" />
+    <result column="result_zodiac" property="resultZodiac" jdbcType="VARCHAR" />
+    <result column="result_five" property="resultFive" jdbcType="VARCHAR" />
+    <result column="result_wave" property="resultWave" jdbcType="VARCHAR" />
+    <result column="result_home" property="resultHome" jdbcType="VARCHAR" />
+    <result column="result_mantissa" property="resultMantissa" jdbcType="VARCHAR" />
+    <result column="game_date" property="gameDate" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    draw_id, game_code, result, result_zodiac, result_five, result_wave, result_home, 
+    result_mantissa, game_date
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.h5.entity.GameDrawOpKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from GAME_DRAW_OP
+    where draw_id = #{drawId,jdbcType=VARCHAR}
+      and game_code = #{gameCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.h5.entity.GameDrawOpKey" >
+    delete from GAME_DRAW_OP
+    where draw_id = #{drawId,jdbcType=VARCHAR}
+      and game_code = #{gameCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.h5.entity.GameDrawOp" >
+    insert into GAME_DRAW_OP (draw_id, game_code, result, 
+      result_zodiac, result_five, result_wave, 
+      result_home, result_mantissa, game_date
+      )
+    values (#{drawId,jdbcType=VARCHAR}, #{gameCode,jdbcType=VARCHAR}, #{result,jdbcType=VARCHAR}, 
+      #{resultZodiac,jdbcType=VARCHAR}, #{resultFive,jdbcType=VARCHAR}, #{resultWave,jdbcType=VARCHAR}, 
+      #{resultHome,jdbcType=VARCHAR}, #{resultMantissa,jdbcType=VARCHAR}, #{gameDate,jdbcType=DATE}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.h5.entity.GameDrawOp" >
+    insert into GAME_DRAW_OP
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="drawId != null" >
+        draw_id,
+      </if>
+      <if test="gameCode != null" >
+        game_code,
+      </if>
+      <if test="result != null" >
+        result,
+      </if>
+      <if test="resultZodiac != null" >
+        result_zodiac,
+      </if>
+      <if test="resultFive != null" >
+        result_five,
+      </if>
+      <if test="resultWave != null" >
+        result_wave,
+      </if>
+      <if test="resultHome != null" >
+        result_home,
+      </if>
+      <if test="resultMantissa != null" >
+        result_mantissa,
+      </if>
+      <if test="gameDate != null" >
+        game_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="drawId != null" >
+        #{drawId,jdbcType=VARCHAR},
+      </if>
+      <if test="gameCode != null" >
+        #{gameCode,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null" >
+        #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="resultZodiac != null" >
+        #{resultZodiac,jdbcType=VARCHAR},
+      </if>
+      <if test="resultFive != null" >
+        #{resultFive,jdbcType=VARCHAR},
+      </if>
+      <if test="resultWave != null" >
+        #{resultWave,jdbcType=VARCHAR},
+      </if>
+      <if test="resultHome != null" >
+        #{resultHome,jdbcType=VARCHAR},
+      </if>
+      <if test="resultMantissa != null" >
+        #{resultMantissa,jdbcType=VARCHAR},
+      </if>
+      <if test="gameDate != null" >
+        #{gameDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.h5.entity.GameDrawOp" >
+    update GAME_DRAW_OP
+    <set >
+      <if test="result != null" >
+        result = #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="resultZodiac != null" >
+        result_zodiac = #{resultZodiac,jdbcType=VARCHAR},
+      </if>
+      <if test="resultFive != null" >
+        result_five = #{resultFive,jdbcType=VARCHAR},
+      </if>
+      <if test="resultWave != null" >
+        result_wave = #{resultWave,jdbcType=VARCHAR},
+      </if>
+      <if test="resultHome != null" >
+        result_home = #{resultHome,jdbcType=VARCHAR},
+      </if>
+      <if test="resultMantissa != null" >
+        result_mantissa = #{resultMantissa,jdbcType=VARCHAR},
+      </if>
+      <if test="gameDate != null" >
+        game_date = #{gameDate,jdbcType=DATE},
+      </if>
+    </set>
+    where draw_id = #{drawId,jdbcType=VARCHAR}
+      and game_code = #{gameCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.h5.entity.GameDrawOp" >
+    update GAME_DRAW_OP
+    set result = #{result,jdbcType=VARCHAR},
+      result_zodiac = #{resultZodiac,jdbcType=VARCHAR},
+      result_five = #{resultFive,jdbcType=VARCHAR},
+      result_wave = #{resultWave,jdbcType=VARCHAR},
+      result_home = #{resultHome,jdbcType=VARCHAR},
+      result_mantissa = #{resultMantissa,jdbcType=VARCHAR},
+      game_date = #{gameDate,jdbcType=DATE}
+    where draw_id = #{drawId,jdbcType=VARCHAR}
+      and game_code = #{gameCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

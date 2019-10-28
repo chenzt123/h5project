@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.h5.mapper.GameDrawMapper" >
+  <resultMap id="BaseResultMap" type="com.h5.entity.GameDraw" >
+    <id column="draw_id" property="drawId" jdbcType="VARCHAR" />
+    <id column="game_code" property="gameCode" jdbcType="VARCHAR" />
+    <result column="close_time" property="closeTime" jdbcType="TIMESTAMP" />
+    <result column="result" property="result" jdbcType="VARCHAR" />
+    <result column="draw_status" property="drawStatus" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    draw_id, game_code, close_time, result, draw_status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.h5.entity.GameDrawKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from GAME_DRAW
+    where draw_id = #{drawId,jdbcType=VARCHAR}
+      and game_code = #{gameCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.h5.entity.GameDrawKey" >
+    delete from GAME_DRAW
+    where draw_id = #{drawId,jdbcType=VARCHAR}
+      and game_code = #{gameCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.h5.entity.GameDraw" >
+    insert into GAME_DRAW (draw_id, game_code, close_time, 
+      result, draw_status)
+    values (#{drawId,jdbcType=VARCHAR}, #{gameCode,jdbcType=VARCHAR}, #{closeTime,jdbcType=TIMESTAMP}, 
+      #{result,jdbcType=VARCHAR}, #{drawStatus,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.h5.entity.GameDraw" >
+    insert into GAME_DRAW
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="drawId != null" >
+        draw_id,
+      </if>
+      <if test="gameCode != null" >
+        game_code,
+      </if>
+      <if test="closeTime != null" >
+        close_time,
+      </if>
+      <if test="result != null" >
+        result,
+      </if>
+      <if test="drawStatus != null" >
+        draw_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="drawId != null" >
+        #{drawId,jdbcType=VARCHAR},
+      </if>
+      <if test="gameCode != null" >
+        #{gameCode,jdbcType=VARCHAR},
+      </if>
+      <if test="closeTime != null" >
+        #{closeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="result != null" >
+        #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="drawStatus != null" >
+        #{drawStatus,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.h5.entity.GameDraw" >
+    update GAME_DRAW
+    <set >
+      <if test="closeTime != null" >
+        close_time = #{closeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="result != null" >
+        result = #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="drawStatus != null" >
+        draw_status = #{drawStatus,jdbcType=INTEGER},
+      </if>
+    </set>
+    where draw_id = #{drawId,jdbcType=VARCHAR}
+      and game_code = #{gameCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.h5.entity.GameDraw" >
+    update GAME_DRAW
+    set close_time = #{closeTime,jdbcType=TIMESTAMP},
+      result = #{result,jdbcType=VARCHAR},
+      draw_status = #{drawStatus,jdbcType=INTEGER}
+    where draw_id = #{drawId,jdbcType=VARCHAR}
+      and game_code = #{gameCode,jdbcType=VARCHAR}
+  </update>
+</mapper>
